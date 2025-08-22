@@ -1,0 +1,173 @@
+@media (min-width: 0px) and (max-width:576px){
+
+    /* DEBUT SECTION 1 */
+
+    .imagegros {
+        height: 70vh;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);   
+    }
+
+    /* debut Animation  du texte d'accueil */ 
+    .animated-textgros {
+      font-size: 18px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      margin-bottom: 15px;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+      position: relative;
+   }
+
+    /* Animation du haut vers le bas */
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Fin Animation  du texte d'accueil */
+
+    .text1gros {
+      font-size: 16px;
+      top: 30%;
+      
+      /* Au-dessus de la superposition */
+    }
+    /* FIN SECTION 1 */
+    
+
+    /* DEBUT SECTION 2 */
+    .titregros {
+        text-align: center;
+        margin-bottom: 30px;
+        color: rgb(255, 115, 0);
+        font-weight: bold;
+        font-size: 36px;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+    .box-service {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        margin-top: 25px;
+        width: auto;
+        
+    }
+    .box-service:hover {
+        transform: scale(1.05);
+    }
+
+    .service-content {
+        text-align: center;
+    }
+
+    .img-image {
+        max-width: 100%;
+        height: 100px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+     /* FIN SECTION 2 */ 
+
+}
+
+
+@media (min-width: 992px) and (max-width:1200px) {
+    /* DEBUT SECTION 1 */
+
+    .imagegros {
+        height: 500px;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);   
+    }
+
+    /* debut Animation  du texte d'accueil */ 
+    .animated-textgros {
+      font-size: 35px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      margin-bottom: 15px;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+   }
+
+    /* Animation du haut vers le bas */
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Fin Animation  du texte d'accueil */
+
+    .text1gros {
+     position: absolute;
+     top: 55%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     color: white;
+     z-index: 2; /* Au-dessus de la superposition */
+    }
+    /* FIN SECTION 1 */
+    
+
+    /* DEBUT SECTION 2 */
+    .titregros {
+        text-align: center;
+        margin-bottom: 30px;
+        color: rgb(255, 115, 0);
+        font-weight: bold;
+        font-size: 36px;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+    .box-service {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+    }
+    .box-service:hover {
+        transform: scale(1.05);
+    }
+
+    .service-content {
+        text-align: center;
+    }
+
+    .img-image {
+        max-width: 100%;
+        height: 100px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+     /* FIN SECTION 2 */ 
+}

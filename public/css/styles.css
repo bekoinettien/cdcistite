@@ -1,0 +1,785 @@
+/* les plus petits écrans */
+
+@media (min-width: 0px )and (max-width: 576px) { 
+
+       /* debut nav */
+    .textmenu{
+        color: rgb(17, 26, 152) !important;
+        text-transform: uppercase;
+    }
+    /* fin nav */
+
+    /* DEBUT SECTION 1 */
+
+    /* debut Image principal accueil */
+    .imageprincipale {
+        height: 70vh;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);   
+    }
+
+       /* Fin Image principal accueil */
+
+
+   /* debut Bouton de carrousel */ 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 100% 100%;   /* Agrandit l’icône */
+        width: 3rem;                 /* Largeur plus grande */
+        height: 3rem;                /* Hauteur plus grande */
+        background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+        border-radius: 50%;          /* Cercle autour */
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: rgba(0,0,0,0.8); /* Plus sombre au survol */
+        transform: scale(1.2);             /* Zoom léger au survol */
+        transition: 0.3s;
+    }
+
+    /* Fin Bouton de carrousel */ 
+
+
+    /* debut Animation  du texte d'accueil */ 
+    .animated-text {
+      font-size: 18px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      justify-items: auto;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+   }
+
+    /* Animation du haut vers le bas */
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Fin Animation  du texte d'accueil */
+
+    .text1 {
+     font-size: 16px;
+     top: 30%;
+    }
+
+    /* FIN SECTION 1 */
+
+    /* DEBUT SECTION 2 */
+
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 30px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 18px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        
+    }
+    /* FIN SECTION 3 */
+    /* DEBUT SECTION4 */
+    .section4 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    
+    
+
+}
+
+
+/* les petits écrans */
+@media (min-width: 577px) and (max-width:768px){
+
+    
+       /* debut nav */
+    .textmenu{
+        color: rgb(17, 26, 152) !important;
+        text-transform: uppercase;
+    }
+    /* fin nav */
+
+    /* DEBUT SECTION 1 */
+
+    /* debut Image principal accueil */
+    .imageprincipale {
+        height: 90vh;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);   
+    }
+
+       /* Fin Image principal accueil */
+
+
+   /* debut Bouton de carrousel */ 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 100% 100%;   /* Agrandit l’icône */
+        width: 3rem;                 /* Largeur plus grande */
+        height: 3rem;                /* Hauteur plus grande */
+        background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+        border-radius: 50%;          /* Cercle autour */
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: rgba(0,0,0,0.8); /* Plus sombre au survol */
+        transform: scale(1.2);             /* Zoom léger au survol */
+        transition: 0.3s;
+    }
+
+    /* Fin Bouton de carrousel */ 
+
+
+    /* debut Animation  du texte d'accueil */ 
+    .animated-text {
+      font-size: 25px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      justify-items: auto;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+   }
+
+    /* Animation du haut vers le bas */
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Fin Animation  du texte d'accueil */
+
+   .text1 {
+     position: absolute;
+     top: 55%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     color: white;
+     z-index: 2; /* Au-dessus de la superposition */
+    }
+
+    /* FIN SECTION 1 */
+
+    /* DEBUT SECTION 2 */
+
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 30px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 18px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        
+    }
+    /* FIN SECTION 3 */
+    /* DEBUT SECTION4 */
+    .section4 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+
+}
+
+
+/* les écrans moyens */
+@media (min-width: 769px) and (max-width: 992px){
+
+/* debut nav */
+    .textmenu{
+        color: rgb(17, 26, 152) !important;
+        text-transform: uppercase;
+    }
+    /* fin nav */
+
+    /* DEBUT SECTION 1 */
+
+    /* debut Image principal accueil */
+    .imageprincipale {
+        height: 90vh;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);   
+    }
+
+       /* Fin Image principal accueil */
+
+
+   /* debut Bouton de carrousel */ 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 100% 100%;   /* Agrandit l’icône */
+        width: 3rem;                 /* Largeur plus grande */
+        height: 3rem;                /* Hauteur plus grande */
+        background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+        border-radius: 50%;          /* Cercle autour */
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: rgba(0,0,0,0.8); /* Plus sombre au survol */
+        transform: scale(1.2);             /* Zoom léger au survol */
+        transition: 0.3s;
+    }
+
+    /* Fin Bouton de carrousel */ 
+
+
+    /* debut Animation  du texte d'accueil */ 
+    .animated-text {
+      font-size: 35px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      justify-items: auto;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+   }
+
+    /* Animation du haut vers le bas */
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Fin Animation  du texte d'accueil */
+
+   .text1 {
+     position: absolute;
+     top: 55%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     color: white;
+     z-index: 2; /* Au-dessus de la superposition */
+    }
+
+    /* FIN SECTION 1 */
+
+    /* DEBUT SECTION 2 */
+
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 30px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 18px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        
+    }
+    /* FIN SECTION 3 */
+    /* DEBUT SECTION4 */
+    .section4 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+
+}
+
+
+
+
+
+/* les écrans larges*/
+@media (min-width: 992px) and (max-width:1200px) { 
+
+   /* debut nav */
+    .textmenu{
+        color: rgb(17, 26, 152) !important;
+        text-transform: uppercase;
+    }
+    /* fin nav */
+
+    /* DEBUT SECTION 1 */
+
+    /* debut Image principal accueil */
+    .imageprincipale {
+        height: 550px;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);   
+    }
+
+       /* Fin Image principal accueil */
+
+
+   /* debut Bouton de carrousel */ 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 100% 100%;   /* Agrandit l’icône */
+        width: 3rem;                 /* Largeur plus grande */
+        height: 3rem;                /* Hauteur plus grande */
+        background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+        border-radius: 50%;          /* Cercle autour */
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: rgba(0,0,0,0.8); /* Plus sombre au survol */
+        transform: scale(1.2);             /* Zoom léger au survol */
+        transition: 0.3s;
+    }
+
+    /* Fin Bouton de carrousel */ 
+
+
+    /* debut Animation  du texte d'accueil */ 
+    .animated-text {
+      font-size: 35px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      margin-bottom: 15px;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+   }
+
+    /* Animation du haut vers le bas */
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Fin Animation  du texte d'accueil */
+
+    .text1 {
+     position: absolute;
+     top: 55%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     color: white;
+     z-index: 2; /* Au-dessus de la superposition */
+    }
+
+    /* FIN SECTION 1 */
+
+    /* DEBUT SECTION 2 */
+
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 30px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 18px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        
+    }
+    /* FIN SECTION 3 */
+    /* DEBUT SECTION4 */
+    .section4 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    
+
+}
+
+
+/* les écrans très larges */
+@media (min-width: 1200px) and (max-width:1400px) { 
+
+    /* debut nav */
+    .textmenu{
+        color: rgb(17, 26, 152) !important;
+        text-transform: uppercase;
+    }
+    /* fin nav */
+
+    /* DEBUT SECTION 1 */
+
+    /* debut Image principal accueil */
+    .imageprincipale {
+        height: 750px;
+        margin-top: 4px;
+        object-fit: cover;
+        filter: brightness(50%);   
+    }
+
+       /* Fin Image principal accueil */
+
+
+   /* debut Bouton de carrousel */ 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 100% 100%;   /* Agrandit l’icône */
+        width: 3rem;                 /* Largeur plus grande */
+        height: 3rem;                /* Hauteur plus grande */
+        background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+        border-radius: 50%;          /* Cercle autour */
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: rgba(0,0,0,0.8); /* Plus sombre au survol */
+        transform: scale(1.2);             /* Zoom léger au survol */
+        transition: 0.3s;
+    }
+
+    /* Fin Bouton de carrousel */ 
+
+
+    /* debut Animation  du texte d'accueil */ 
+    .animated-text {
+      font-size: 35px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      margin-bottom: 15px;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+   }
+
+    /* Animation du haut vers le bas */
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Fin Animation  du texte d'accueil */
+
+    .text1 {
+     position: absolute;
+     top: 55%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     color: white;
+     z-index: 2; /* Au-dessus de la superposition */
+    }
+
+    /* FIN SECTION 1 */
+
+    /* DEBUT SECTION 2 */
+
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 30px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 18px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        
+    }
+    /* FIN SECTION 3 */
+    /* DEBUT SECTION4 */
+    .section4 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    
+    
+
+}
+
+
+
+ /* les écrans très larges */
+@media (min-width: 1400px)  { 
+    /* debut nav */
+    .textmenu{
+        color: rgb(17, 26, 152) !important;
+        text-transform: uppercase;
+    }
+    /* fin nav */
+
+    /* DEBUT SECTION 1 */
+
+    /* debut Image principal accueil */
+    .imageprincipale {
+        height: 850px;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);   
+    }
+
+       /* Fin Image principal accueil */
+
+
+   /* debut Bouton de carrousel */ 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-size: 100% 100%;   /* Agrandit l’icône */
+        width: 3rem;                 /* Largeur plus grande */
+        height: 3rem;                /* Hauteur plus grande */
+        background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+        border-radius: 50%;          /* Cercle autour */
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: rgba(0,0,0,0.8); /* Plus sombre au survol */
+        transform: scale(1.2);             /* Zoom léger au survol */
+        transition: 0.3s;
+    }
+
+    /* Fin Bouton de carrousel */ 
+
+
+    /* debut Animation  du texte d'accueil */ 
+    .animated-text {
+      font-size: 55px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      margin-bottom: 15px;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+   }
+
+    /* Animation du haut vers le bas */
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Fin Animation  du texte d'accueil */
+
+    .text1 {
+     position: absolute;
+     top: 55%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     color: white;
+     z-index: 2; /* Au-dessus de la superposition */
+    }
+
+    /* FIN SECTION 1 */
+
+    /* DEBUT SECTION 2 */
+
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 50px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 28px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        
+    }
+    /* FIN SECTION 3 */
+    /* DEBUT SECTION4 */
+    .section4 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 116, 0.866);
+        border-radius: 4%;
+    }
+    
+
+}
+
