@@ -3,49 +3,44 @@
 
 <section class="sectiongros1 ">
   <div>
-    <img src="{{ asset('images/image4.jpg') }}" alt="..." class="d-block w-100 imagegros">
+    <img src="{{ asset('images/images18.jpeg') }}" alt="..." class="d-block w-100 imagegros">
     <div class="carousel-caption text1gros">
-      <h2 class="animated-textgros">Bienvenue dans la section King Cash</h2>
+      <h2 class="animated-textgros">Bienvenue dans la section Demi-Gros</h2>
       <p>Découvrez nos offres en gros adaptées à vos besoins.</p>
     </div>
   </div>
 </section>
-
 <br>
 <br>
-
 <section class="section-gros">
     <div class="container">
         <div class="titregros text-center">
-            <h2> Nos Site <span>King Cash</span></h2>
+            <h2> Nos Site <span>ACT</span></h2>
         </div>
         <br>
         <div class="row">
 
-            @foreach($king as $index => $kng)
+            @foreach($actualites as $index => $actu)
             <div class="col-sm-6 col-md-6 col-lg-4">
-                <div class="box-service" style="padding: 5% ; margin-bottom: 20px;">
-                    <div >
+                <div class="box-service " style="padding: 5% ; margin-bottom: 20px;">
+                    <div class="service-content text-center">
                         <!-- Image -->
-                        <img src="/storage/king/{{ basename($kng->image) }}" class="img-image mb-3">
+                        <img src="/storage/actualite/{{ basename($actu->image) }}" class="img-image mb-3">
 
-                        <!-- Name -->
-                        <p class="details">
-                            <i class="fa-solid fa-store me-2 icon-details"></i> {{ $kng->name }}
-                        </p>
+                        
 
                         <!-- Localisation -->
-                        <p class="details">
-                            <i class="fa-solid fa-location-dot me-2 icon-details"></i> {{ $kng->location }}
+                        <p class="details" style="text-align: center; font-weight: bold; font-size: 25px;">
+                            <i class="fa-solid fa-location-dot me-2 icon-details"></i> {{ $actu->location }}
                         </p>
 
                         <!-- Description -->
                         <p class="details">
-                            <i class="fa-solid fa-info-circle me-2 icon-details"></i> {{ $kng->description }}
+                            <i class="fa-solid fa-info-circle me-2 icon-details"></i> {{ $actu->description }}
                         </p>
 
                         <!-- Horaire (ouvre modal) -->
-                        <p class=" text-primary" 
+                        <p class="details text-primary" 
                            style="cursor:pointer;"
                            data-bs-toggle="modal" 
                            data-bs-target="#horaireModal{{ $index }}">
@@ -60,12 +55,12 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Horaires - {{ $kng->name }}</h5>
+                            <h5 class="modal-title">Horaires - {{ $actu->location }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body text-center">
-                            <p><i class="fa-solid fa-clock me-2"></i> Ouverture : <b>{{ $kng->heure_ouverture ?? '08:00' }}</b></p>
-                            <p><i class="fa-solid fa-clock me-2"></i> Fermeture : <b>{{ $kng->heure_fermeture ?? '18:00' }}</b></p>
+                            <p><i class="fa-solid fa-clock me-2"></i> Ouverture : <b>{{ $actu->heure_ouverture ?? '08:00' }}</b></p>
+                            <p><i class="fa-solid fa-clock me-2"></i> Fermeture : <b>{{ $actu->heure_fermeture ?? '18:00' }}</b></p>
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -80,8 +75,6 @@
 </section>
 
 <br>
-<br>
-
 <section class="map-section container-fluid">
   <div class="text-center">
     <h2>Carte des communes d’Abidjan</h2>

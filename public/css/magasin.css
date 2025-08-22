@@ -64,8 +64,6 @@
         overflow: hidden;
         transition: transform 0.2s;
         height: 300px;
-        margin-top: 25px;
-        width: auto;
         
     }
     .box-service:hover {
@@ -74,10 +72,11 @@
 
     .service-content {
         text-align: center;
+        
     }
 
     .img-image {
-        max-width: 100%;
+        width: 300px;
         height: 100px;
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -145,7 +144,7 @@
     }
 
     .box-service {
-        padding: 20px;
+        
         background-color: #f9f9f9;
         border: 1px solid #eee;
         border-radius: 5px;
@@ -153,7 +152,8 @@
         border: 1px solid #ccc;
         overflow: hidden;
         transition: transform 0.2s;
-        height: 300px;
+        height: auto;
+        
     }
     .box-service:hover {
         transform: scale(1.05);
@@ -164,10 +164,23 @@
     }
 
     .img-image {
-        max-width: 100%;
-        height: 100px;
+        width: 100%;
+        height: 250px;
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
      /* FIN SECTION 2 */ 
+
+    .details {
+        font-size: 14px;
+        margin-bottom: 10px;
+        
+
+    }
+    .icon-details {
+        color: rgb(255, 115, 0) !important;
+        font-size: 18px !important;
+        margin-right: 8px;
+    }
+
 }

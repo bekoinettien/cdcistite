@@ -69,28 +69,26 @@ class ControllerBackend extends Controller
         $king->location = $request->input('location');
         $king->description = $request->input('description');
         $king->save();
+        return redirect()->back()->with('success', 'King ajouté avec succès !');
     }
 
-    public function actualite(Request $request){
-        return view('pages.actualite');
-    }
+   
 
-    public function createActualite(Request $request){
+    public function createActualite(Request $request)
+    {
         $request->validate([
             'image'=>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'name'=>'required|string|max:255',
-            'localisation'=>'required|string|max:255',
+            'location'=>'required|string|max:255',
             'description'=>'required|string|max:1000',
         ]);
-        $actualite= new Actualite();
+        $actualites= new Actualite();
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('actualites', 'public');
-            $actualite->image = $imagePath;
+            $imagePath = $request->file('image')->store('actualite', 'public');
+            $actualites->image = $imagePath;
         }
-        $actualite->name = $request->input('name');
-        $actualite->localisation = $request->input('localisation');
-        $actualite->description = $request->input('description');
-        $actualite->save();
+        $actualites->location = $request->input('location');
+        $actualites->description = $request->input('description');
+        $actualites->save();
         return redirect()->back()->with('success', 'Actualité ajoutée avec succès !');
     }
 }

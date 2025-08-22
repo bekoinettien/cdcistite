@@ -32,6 +32,9 @@ Route::get('/listeking',[ControllerPages::class,'listking'])->name('listking.sto
 
 Route::get('/actualite',[ControllerPages::class,'actualite'])->name('actualite.store');
 Route::post('/actualite/create',[ControllerBackend::class,'createActualite'])->name('create.Actualite');
+Route::get('/listeactualite',[ControllerPages::class,'listeactualite'])->name('listeactualite.store');
+
+
 
 
 // route des modifications
@@ -44,3 +47,7 @@ Route::get('/king/edit',[ControllerBackend::class,'editKing'])->name('editKing')
 Route::post('/demi/delete',[ControllerBackend::class,'deleteDemi']);
 Route::post('/gros/delete',[ControllerBackend::class,'deleteGros']);
 Route::post('/king/delete',[ControllerBackend::class,'deleteKing']);
+
+
+
+Route::get('/dashboard',[ControllerPages::class,'dashboard'])->name('dashboard');

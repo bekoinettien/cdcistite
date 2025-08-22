@@ -106,7 +106,7 @@
     /* DEBUT SECTION 3 */
     .section3 {
         padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
+        background-color: rgba(13, 13, 87, 0.866);
         border-radius: 4%;
     }
     .imagesection3 {
@@ -239,7 +239,7 @@
     /* DEBUT SECTION 3 */
     .section3 {
         padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
+        background-color: rgba(13, 13, 87, 0.866);
         border-radius: 4%;
     }
     .imagesection3 {
@@ -369,7 +369,7 @@
     /* DEBUT SECTION 3 */
     .section3 {
         padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
+        background-color: rgba(13, 13, 87, 0.866);
         border-radius: 4%;
     }
     .imagesection3 {
@@ -502,7 +502,7 @@
     /* DEBUT SECTION 3 */
     .section3 {
         padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
+        background-color: rgba(13, 13, 87, 0.866);
         border-radius: 4%;
     }
     .imagesection3 {
@@ -510,13 +510,20 @@
         
     }
     /* FIN SECTION 3 */
+    
     /* DEBUT SECTION4 */
     .section4 {
         padding: 50px 0;
         background-color: rgba(13, 13, 116, 0.866);
         border-radius: 4%;
     }
-    
+      /* NOS CHIFFRES */
+      .fa-solid{
+          color: rgb(255, 255, 255);
+          text-align: center; 
+          font-weight: bold;
+         font-size: 50px;
+    }
 
 }
 

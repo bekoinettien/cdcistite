@@ -36,20 +36,26 @@
             <li class="nav-item">
               <a class="nav-link textmenu" href="/about">A Propos</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link textmenu" href="/listegros">GROS</a>
+            </li>
             
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle textmenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 Nos Magasins
+                 DETAILS
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/listegros">GROS</a></li>
                 <li><a class="dropdown-item" href="/listedemi">DEMI-GROS</a></li>
                 <li><a class="dropdown-item" href="/listeking">KING-CASH</a></li>
               </ul>
             </li>
            
             <li class="nav-item">
-             <a class="nav-link textmenu" href="gros">Contacts</a>
+             <a class="nav-link textmenu" href="listeactualite">ACTUALITÉS</a>
+            </li>
+
+            <li class="nav-item">
+             <a class="nav-link textmenu" href="contacts">CONTACTS</a>
             </li>
       
           </ul>

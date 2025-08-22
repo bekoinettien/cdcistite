@@ -22,29 +22,32 @@
 
             @foreach($gros as $index => $gro)
             <div class="col-sm-6 col-md-6 col-lg-4">
-                <div class="box-service">
-                    <div class="service-content text-center">
+                <div class="box-service" style="padding: 5% ; margin-bottom: 20px;">
+                    <div>
                         <!-- Image -->
                         <img src="/storage/gros/{{ basename($gro->image) }}" class="img-image mb-3">
 
                         <!-- Name -->
-                        <p class="d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-store me-2"></i> {{ $gro->name }}
+                        <p class="details">
+                            <i class="fa-solid fa-store me-2 icon-details"></i> {{ $gro->name }}
                         </p>
 
                         <!-- Localisation -->
-                        <p class="d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-location-dot me-2"></i> {{ $gro->location }}
+                        <p class="details">
+                            <i class="fa-solid fa-location-dot me-2 icon-details"></i> {{ $gro->location }}
                         </p>
 
-                        
+                        <!-- Description -->
+                        <p class="details">
+                            <i class="fa-solid fa-info-circle me-2 icon-details"></i> {{ $gro->description }}
+                        </p>    
 
                         <!-- Horaire (ouvre modal) -->
-                        <p class="d-flex align-items-center justify-content-center text-primary" 
+                        <p class="text-primary" 
                            style="cursor:pointer;"
                            data-bs-toggle="modal" 
                            data-bs-target="#horaireModal{{ $index }}">
-                            <i class="fa-solid fa-clock me-2"></i> Voir les horaires
+                            <i class="fa-solid fa-clock me-2 icon-details"></i> Voir les horaires
                         </p>
                     </div>
                 </div>

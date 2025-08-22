@@ -4,14 +4,22 @@ namespace App\Http\Controllers;
 use App\Models\Gros;
 use App\Models\Demi;
 use App\Models\King;
+use App\Models\Actualite;
+
 use Illuminate\Http\Request;
 
 class ControllerPages extends Controller
 {
     public function accueil()
     {
-        return view('pages.accueil');
-        
+         $actualites = Actualite::orderBy('created_at', 'desc')
+                            ->take(3) // récupérer seulement les 3 dernières
+                            ->get();
+        $gros = Gros::count();
+        $demi = Demi::count();
+        $king = King::count();
+        return view('pages.accueil', compact('actualites', 'gros', 'demi', 'king'));
+
     }
 
     public function gros()
@@ -50,7 +58,23 @@ class ControllerPages extends Controller
         return view('pages.kingcash', compact('king'));
     }
 
+
+    public function actualite()
+    {
+        return view('admin.pages.ajoutactualite');
+
+    }
+    public function listeactualite(){
+        $actualites=Actualite::all();
+        return view('pages.actualite', compact('actualites'));
+    }
+
     public function about(){
         return view('pages.about');
+    }
+
+
+    public function dashboard(){
+        return view('admin.layout.dashboard');
     }
 }
