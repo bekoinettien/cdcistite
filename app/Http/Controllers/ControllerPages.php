@@ -75,6 +75,31 @@ class ControllerPages extends Controller
 
 
     public function dashboard(){
-        return view('admin.layout.dashboard');
+        $gros = Gros::count();
+        $demi = Demi::count();
+        $king = King::count();
+        $actualites = Actualite::count();
+
+        return view('admin.layout.dashboard', compact('gros', 'demi', 'king', 'actualites'));
+    }
+    
+    public function listeAdminDemi(){
+        $demi = Demi::all();
+        return view('admin.pages.listeadmindemi', compact('demi'));
+    }
+
+    public function listeAdminGros(){
+        $gros = Gros::all();
+        return view('admin.pages.listeadmingros', compact('gros'));
+    }
+
+    public function listeAdminKing(){
+        $king = King::all();
+        return view('admin.pages.listeadminking', compact('king'));
+    }
+
+    public function listeAdminActualite(){
+        $actualites = Actualite::all();
+        return view('admin.pages.listeadminactualite', compact('actualites'));
     }
 }

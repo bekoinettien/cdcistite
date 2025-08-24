@@ -12,7 +12,7 @@ Route::get('/',[ControllerPages::class,'accueil']);
 Route::get('/about',[ControllerPages::class,'about']);
 
 
-Route::get('/gros',[ControllerPages::class,'gros'])->name('gros.store');
+Route::get('/gros',[ControllerPages::class,'gros'])->name('gros');
 Route::post('/gros/create',[ControllerBackend::class,'createGros'])->name('create.Gros');
 Route::get('/listegros',[ControllerPages::class,'listegros'])->name('listegros.store');
 
@@ -24,7 +24,7 @@ Route::get('/listedemi',[ControllerPages::class,'listedemi'])->name('listedemi.s
 
 
 
-Route::get('/king',[ControllerPages::class,'king'])->name('king.store');
+Route::get('/king',[ControllerPages::class,'king'])->name('king');
 Route::post('/king/create',[ControllerBackend::class,'createKing'])->name('create.King');
 Route::get('/listeking',[ControllerPages::class,'listking'])->name('listking.store');
 
@@ -51,3 +51,7 @@ Route::post('/king/delete',[ControllerBackend::class,'deleteKing']);
 
 
 Route::get('/dashboard',[ControllerPages::class,'dashboard'])->name('dashboard');
+Route::get('/listeadmindemi',[ControllerPages::class,'listeAdminDemi'])->name('listeadmindemi');
+Route::get('/listeadmingros',[ControllerPages::class,'listeAdminGros'])->name('listeadmingros');
+Route::get('/listeadminking',[ControllerPages::class,'listeAdminKing'])->name('listeadminking');
+Route::get('/listeadminactualite',[ControllerPages::class,'listeAdminActualite'])->name('listeadminactualite');

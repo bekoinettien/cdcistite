@@ -1,9 +1,9 @@
-@extends('layouts.head')
+@extends('admin.layout.dashboard')
 @section('content') 
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6">
-            <img src="{{asset('images/images10.jpeg')}}" alt="" class="w-100 h-100">
+            <img src="{{asset('images/images10.jpeg')}}" alt="" class="w-100" style="height: 380px; margin-top: 20px;">
         </div>
         <div class="col-sm-6">
             <h1>Ajouter un KingCash</h1>
@@ -26,7 +26,9 @@
                         <label for="description" class="form-label">Description</label>
                         <textarea class="form-control" id="description" name="description" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                    <div class="text-center">
+                       <button type="submit" class="btn btn-primary">Ajouter</button>
+                   </div>
                 </form>
             </div>
         </div>
