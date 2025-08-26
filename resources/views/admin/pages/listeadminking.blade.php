@@ -39,7 +39,7 @@
 <section class="service_section layout_padding">
     <div class="container">
       <div class="titre">
-        <h2> Nos site <span>Gros</span></h2>
+        <h2> Nos site <span>King Cash</span></h2>
       </div>
       <table>
         <thead>
@@ -63,7 +63,7 @@
             <td>{{ $kin->created_at }}</td>
            
             <td>
-              <a href="#" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
+              <a href="/king/edit/{{ $kin->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
               <a href="#" class="btn btn-danger sup">SUPPRIMER</a>
             </td>
             

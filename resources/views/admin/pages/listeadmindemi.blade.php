@@ -31,7 +31,7 @@
 
 <section class="secttion-1">
     <div class="btn-container">
-    <a href="#" class="btn btn-success mod" style="margin: 5px;">Ajouter un demi gros</a></br>
+    <a href="/demi" class="btn btn-success mod" style="margin: 5px;">Ajouter un demi gros</a></br>
     <a href="" class="btn btn-danger sup" style="margin: 5px;">SUPPRIMER</a>
     </div>
 </section>
@@ -62,7 +62,7 @@
             <td>{{ $dem->description }}</td>
             <td>{{ $dem->created_at }}</td>
             <td>
-              <a href="#" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
+              <a href="/demi/edit/{{ $dem->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
               <a href="#" class="btn btn-danger sup">SUPPRIMER</a>
             </td>
             

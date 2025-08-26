@@ -31,8 +31,7 @@
 
 <section class="secttion-1">
     <div class="btn-container">
-    <a href="#" class="btn btn-success mod" style="margin: 5px;">Ajouter une Actualité</a></br>
-    <a href="#" class="btn btn-danger sup" style="margin: 5px;">SUPPRIMER</a>
+    <a href="/actualite" class="btn btn-success mod" style="margin: 5px;">Ajouter une Actualité</a></br>
     </div>
 </section>
 
@@ -61,7 +60,7 @@
             <td>{{ $actu->created_at }}</td>
 
             <td>
-              <a href="#" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
+              <a href="/actualite/edit/{{ $actu->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
               <a href="#" class="btn btn-danger sup">SUPPRIMER</a>
             </td>
             

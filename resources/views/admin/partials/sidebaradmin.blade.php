@@ -1,4 +1,4 @@
-<aside class="app-sidebar  shadow" data-bs-theme="dark" style="background-color: darkblue">
+<aside class="app-sidebar  shadow" data-bs-theme="dark" style="background-color: rgb(9, 9, 88)">
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
           <!--begin::Brand Link-->
@@ -37,7 +37,60 @@
                 </a>
                 
               </li>
-              
+              <li class="nav-header">Gestion des Pages</li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                  <p>
+                    Accueil
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="/accueil" class="nav-link">
+                          <i class='fa fa-code'></i>
+                          <p>Ajouter un slide Accueil</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="/listeadminaccueil" class="nav-link">
+                          <i class='fa fa-book'></i>
+                          <p>Liste des Slides</p>
+                        </a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a href="/listepromotions" class="nav-link">
+                          <i class='fa fa-bullhorn'></i>
+                          <p>Ajouter une promotion</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="/listeadminpromotions" class="nav-link">
+                         <i class='fa fa-feed'></i>
+                          <p>Liste des Promotions</p>
+                        </a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class='fa fa-file-text'></i>
+                          <p>Ajouter une activités</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                         <i class='fa fa-bell'></i>
+                          <p>Liste des Activités</p>
+                        </a>
+                      </li>
+                    
+                  </li>
+                </ul>
+              </li>
+              <hr style="border: 1px solid white; margin: 10px 0;">
+              <li class="nav-header">Gestion des sites</li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-box-seam-fill"></i>
@@ -105,7 +158,7 @@
                   </li>
                 </ul>
               </li>
-
+              <hr style="border: 1px solid white; margin: 10px 0;">
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-table"></i>
@@ -128,7 +181,7 @@
                 </ul>
               </li>
 
-              <li class="nav-header">USERS</li>
+              <li class="nav-header">Utilisateurs</li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-box-arrow-in-right"></i>
@@ -138,28 +191,20 @@
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="nav-icon bi bi-box-arrow-in-right"></i>
-                      <p>
-                        Version 1
-                        <i class="nav-arrow bi bi-chevron-right"></i>
-                      </p>
-                    </a>
-                    <ul class="nav nav-treeview">
+
                       <li class="nav-item">
                         <a href="./examples/login.html" class="nav-link">
-                          <i class="nav-icon bi bi-circle"></i>
+                          <i class='fa fa-users'></i>
                           <p>Login</p>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="./examples/register.html" class="nav-link">
-                          <i class="nav-icon bi bi-circle"></i>
+                          <i class='fa fa-user-plus'></i>
                           <p>Register</p>
                         </a>
                       </li>
-                    </ul>
+                    
                   </li>
                 </ul>
               </li>

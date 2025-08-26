@@ -2,54 +2,125 @@
 @section('content')
     {{-- DEBUT DE LA SECTION 1 --}}
     <section class="section1">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        @foreach ($accueils as $key => $item)
+            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                <img src="/storage/accueil/{{ basename($item->image) }}" 
+                     class="d-block w-100 imageprincipale" 
+                     alt="{{ $item->title }}">
+                <div class="carousel-caption d-none d-md-block text1">
+                    <h2 class="animated-text">{{ $item->title }}</h2>
+                    <p>{{ $item->description }}</p>
+                </div>
+            </div>
+        @endforeach
+    </div>
 
-                {{-- Slide 1 --}}
-                <div class="carousel-item active" data-bs-interval="10000">
+    <!-- Boutons précédent et suivant -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Précédent</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Suivant</span>
+    </button>
+</div>
+
+    </section>
+
+    {{-- <div class="carousel-item active" data-bs-interval="10000">
                     <img src="{{asset('images/images7.jpeg')}}" class="d-block w-100 imageprincipale" alt="...">
                     <div class="carousel-caption  text1">
                         <h2 class="animated-text">Bienvenue sur notre site</h2>
                         <p>Nous sommes ravis de vous accueillir sur notre plateforme. Explorez nos produits et services.</p>
                     </div>
-                </div>
+                </div> --}}
 
                 {{-- Slide 2 --}}
-                <div class="carousel-item" data-bs-interval="2000">
+                {{-- <div class="carousel-item" data-bs-interval="2000">
                     <img src="{{asset('images/images12.jpeg')}}" class="d-block w-100 imageprincipale" alt="...">
                     <div class="carousel-caption  text1">
                         <h2 class="animated-text">Nos Produits</h2>
                         <p>Découvrez une large gamme de produits adaptés à vos besoins.</p>
                     </div>
-                </div>
+                </div> --}}
 
                 {{-- Slide 3 --}}
-                <div class="carousel-item">
+                {{-- <div class="carousel-item">
                     <img src="{{asset('images/images14.jpeg')}}" class="d-block w-100 imageprincipale" alt="...">
                     <div class="carousel-caption text1">
                         <h2 class="animated-text">Nos Services</h2>
                         <p>Un accompagnement personnalisé pour vous offrir la meilleure expérience.</p>
                     </div>
-                </div>
+                </div> --}}
 
-            </div>
-
-            {{-- Controls --}}
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
     {{-- FIN DE LA SECTION 1 --}}
         <br>
         <br>
+    <section>
+        <marquee behavior="scroll" direction="left" style="background-color: brown ; color: white; font-weight: bold; padding: 10px; font-size: 25px; border-radius: 15px;">Découvrez nos dernières promotions !   </marquee>
+        <br>
+        <br>
+        <div class="titre">
+            <h1 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);"> Nos <span >Promotions</span></h1>
+        </div>
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <style>
+        .logo-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin-top: 15px;
+            
+        }
         
+        .logo-item img {
+            max-width: 300px;
+            max-height: 100px;
+            border-radius: 15px;
+            object-fit: contain;
+        }
+        </style>
+        </head>
+        <body>
+        <!-- Carousel -->
+        <div class="logo-carousel owl-carousel promo">
+            @foreach($promotions as $promotion)
+            <div class="logo-item"><img src="{{ asset('storage/' . $promotion->image) }}" alt="Logo {{ $promotion->title }}"></div>
+            @endforeach
+        </div>
 
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Owl Carousel JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script>
+         $(document).ready(function () {
+          $(".logo-carousel").owlCarousel({
+              loop: true,
+              margin: 10,
+              autoplay: true,
+              autoplayTimeout: 2000,
+              autoplayHoverPause: true,
+              responsive: {
+                  0: { items: 2 },
+                  600: { items: 3 },
+                  1000: { items: 5 }
+              }
+          });
+        });
+    </script>
+    </body>
+</section>
+    
+    <br>
+    <br>
     {{-- DEBUT DE LA SECTION 2 --}}
     <section class="section2 "> 
         <div class="row container-fluid">
@@ -72,7 +143,7 @@
     {{-- DEBUT DE LA SECTION 3 --}}
     <section class="section_3" >
         <div>
-            <h1 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);">NOS CHIFFRES</h1>        
+            <h1 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);">Nos Chiffres</h1>        
         </div>
         <br>
         <div class="row container-fluid section3 ">
@@ -148,7 +219,7 @@
     {{-- DEBUT DE LA SECTION 4 --}}
     <section class="section_4 container">
         <div>
-            <h1 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);">ACTUALITÉS</h1>
+            <h1 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);">Nos Actualités</h1>
             <p style="text-align: center; font-size: 14px;">Découvrez les dernières nouvelles et mises à jour.</p>
             <br>
         </div>
@@ -174,10 +245,8 @@
     {{-- FIN DE LA SECTION 4 --}}
         <br>
         <br>
-    <section class="section_5">
-            <h1 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);">CONTACTEZ-NOUS</h1>
-            <p style="text-align: center; font-size: 14px;">Nous serions ravis de vous entendre.</p>
-            <br>    
-    </section>
-    
+   <section>
+       <h2 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);">Nos Activités</h2>
+       <p style="text-align: center; font-size: 14px;">En savoir plus sur notre entreprise et nos valeurs.</p>
+   </section>
 @endsection

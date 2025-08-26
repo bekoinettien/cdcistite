@@ -31,8 +31,8 @@
 
 <section class="secttion-1">
     <div class="btn-container">
-    <a href="#" class="btn btn-success mod" style="margin: 5px;">Ajouter un nouveau Site</a></br>
-    <a href="" class="btn btn-danger sup" style="margin: 5px;">SUPPRIMER</a>
+    <a href="/listepromotions" class="btn btn-success mod" style="margin: 5px;">Ajouter une promotions</a></br>
+    <a href="#" class="btn btn-danger sup" style="margin: 5px;">SUPPRIMER</a>
     </div>
 </section>
 
@@ -46,24 +46,27 @@
           <tr>
             <th>Image</th>
             <th>Titre</th>
-            <th>Localisation</th>
             <th>Description</th>
+            <th>Ancien Prix</th>
+            <th>Nouveau Prix</th>
             <th>Date de création</th>
+            <th>Date de fin</th>
             <th>Actions</th>
             
           </tr>
         </thead>
         <tbody>
-        @foreach($gros as $index => $gro)
+        @foreach($promotions as $index => $promotion)
           <tr>
-            <td><img src="/storage/gros/{{ basename($gro->image) }}" style="max-width: 50px; height: 50px; padding-top:10px"></td>
-            <td>{{ $gro->name }}</td>
-            <td>{{ $gro->location }}</td>
-            <td>{{ $gro->description }}</td>
-            <td>{{ $gro->created_at }}</td>
-           
+            <td><img src="/storage/promotions/{{ basename($promotion->image) }}" style="max-width: 50px; height: 50px; padding-top:10px"></td>
+            <td>{{ $promotion->title }}</td>
+            <td>{{ $promotion->description }}</td>
+            <td>{{ $promotion->discountend }}F</td>
+            <td>{{ $promotion->discountstart }}F</td>
+            <td>{{ $promotion->start_date }}</td>
+            <td>{{ $promotion->end_date }}</td>
             <td>
-              <a href="/gros/edit/{{ $gro->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
+              <a href="/promotion/edit/{{ $promotion->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
               <a href="#" class="btn btn-danger sup">SUPPRIMER</a>
             </td>
             

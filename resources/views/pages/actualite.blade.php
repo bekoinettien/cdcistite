@@ -3,9 +3,9 @@
 
 <section class="sectiongros1 ">
   <div>
-    <img src="{{ asset('images/images18.jpeg') }}" alt="..." class="d-block w-100 imagegros">
+    <img src="{{ asset('images/images11.jpeg') }}" alt="..." class="d-block w-100 imagegros">
     <div class="carousel-caption text1gros">
-      <h2 class="animated-textgros">Bienvenue dans la section Demi-Gros</h2>
+      <h2 class="animated-textgros">Bienvenue dans la section Des Actualités</h2>
       <p>Découvrez nos offres en gros adaptées à vos besoins.</p>
     </div>
   </div>
@@ -15,7 +15,7 @@
 <section class="section-gros">
     <div class="container">
         <div class="titregros text-center">
-            <h2> Nos Site <span>ACT</span></h2>
+            <h2> Nos <span>Actualités</span></h2>
         </div>
         <br>
         <div class="row">
@@ -26,8 +26,6 @@
                     <div class="service-content text-center">
                         <!-- Image -->
                         <img src="/storage/actualite/{{ basename($actu->image) }}" class="img-image mb-3">
-
-                        
 
                         <!-- Localisation -->
                         <p class="details" style="text-align: center; font-weight: bold; font-size: 25px;">

@@ -31,22 +31,20 @@
 
 <section class="secttion-1">
     <div class="btn-container">
-    <a href="#" class="btn btn-success mod" style="margin: 5px;">Ajouter un nouveau Site</a></br>
-    <a href="" class="btn btn-danger sup" style="margin: 5px;">SUPPRIMER</a>
+    <a href="/accueil" class="btn btn-success mod" style="margin: 5px;">Ajouter Slide</a></br>
     </div>
 </section>
 
 <section class="service_section layout_padding">
     <div class="container">
       <div class="titre">
-        <h2> Nos site <span>Gros</span></h2>
+        <h2> Nos <span>Slides</span></h2>
       </div>
       <table>
         <thead>
           <tr>
             <th>Image</th>
             <th>Titre</th>
-            <th>Localisation</th>
             <th>Description</th>
             <th>Date de création</th>
             <th>Actions</th>
@@ -54,16 +52,15 @@
           </tr>
         </thead>
         <tbody>
-        @foreach($gros as $index => $gro)
+        @foreach($accueils as $index => $acc)
           <tr>
-            <td><img src="/storage/gros/{{ basename($gro->image) }}" style="max-width: 50px; height: 50px; padding-top:10px"></td>
-            <td>{{ $gro->name }}</td>
-            <td>{{ $gro->location }}</td>
-            <td>{{ $gro->description }}</td>
-            <td>{{ $gro->created_at }}</td>
-           
+            <td><img src="/storage/accueil/{{ basename($acc->image) }}" style="max-width: 50px; height: 50px; padding-top:10px"></td>
+            <td>{{ $acc->title }}</td>
+            <td>{{ $acc->description }}</td>
+            <td>{{ $acc->created_at }}</td>
+
             <td>
-              <a href="/gros/edit/{{ $gro->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
+              <a href="/accueil/edit/{{ $acc->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
               <a href="#" class="btn btn-danger sup">SUPPRIMER</a>
             </td>
             

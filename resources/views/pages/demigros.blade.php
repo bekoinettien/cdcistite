@@ -18,62 +18,30 @@
             <h2> Nos Site <span>Demi-Gros</span></h2>
         </div>
         <br>
-        <div class="row">
+         @foreach($demi as $index => $dem)
+        <div class="row box-service mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
 
-            @foreach($demi as $index => $dem)
-            <div class="col-sm-6 col-md-6 col-lg-4">
-                <div class="box-service" style="padding: 5% ; margin-bottom: 20px;">
+            <div class="col-sm-6 col-md-6 col-lg-4 " >
+                <div  style="padding: 5% ; margin-bottom: 20px;">
                     <div>
                         <!-- Image -->
-                        <img src="/storage/demi/{{ basename($dem->image) }}" class="img-image mb-3">
-
-                        <!-- Name -->
-                        <p class="details">
-                            <i class="fa-solid fa-store me-2 icon-details"></i> {{ $dem->name }}
-                        </p>
-
-                        <!-- Localisation -->
+                        <img src="/storage/demi/{{ basename($dem->image) }}" class="img-image mb-3">    
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-8" style="background-color: aqua">
+                    <p class="details">
+                      <i class="fa-solid fa-store me-2 icon-details"></i> {{ $dem->name }}
+                    </p>
                         <p class="details">
                             <i class="fa-solid fa-location-dot me-2 icon-details"></i> {{ $dem->location }}
                         </p>
-
-                        <!-- Description -->
                         <p class="details">
                             <i class="fa-solid fa-info-circle me-2 icon-details"></i> {{ $dem->description }}
                         </p>
-
-                        <!-- Horaire (ouvre modal) -->
-                        <p class=" text-primary" 
-                           style="cursor:pointer;"
-                           data-bs-toggle="modal" 
-                           data-bs-target="#horaireModal{{ $index }}">
-                            <i class="fa-solid fa-clock me-2 icon-details"></i> Voir les horaires
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="horaireModal{{ $index }}" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Horaires - {{ $dem->name }}</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <p><i class="fa-solid fa-clock me-2"></i> Ouverture : <b>{{ $dem->heure_ouverture ?? '08:00' }}</b></p>
-                            <p><i class="fa-solid fa-clock me-2"></i> Fermeture : <b>{{ $dem->heure_fermeture ?? '18:00' }}</b></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-
+            </div>  
         </div>
+        @endforeach
     </div>
 </section>
 

@@ -57,6 +57,10 @@
             <li class="nav-item">
              <a class="nav-link textmenu" href="contacts">CONTACTS</a>
             </li>
+
+            <li class="nav-item">
+             <a class="nav-link textmenu" href="dashboard">DASHOARD</a>
+            </li>
       
           </ul>
           <form class="d-flex" role="search">
