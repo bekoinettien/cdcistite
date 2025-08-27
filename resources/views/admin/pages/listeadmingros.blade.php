@@ -31,8 +31,7 @@
 
 <section class="secttion-1">
     <div class="btn-container">
-    <a href="#" class="btn btn-success mod" style="margin: 5px;">Ajouter un nouveau Site</a></br>
-    <a href="" class="btn btn-danger sup" style="margin: 5px;">SUPPRIMER</a>
+    <a href="/gros" class="btn btn-success mod" style="margin: 5px;">Ajouter un nouveau Site</a></br>
     </div>
 </section>
 
@@ -64,7 +63,11 @@
            
             <td>
               <a href="/gros/edit/{{ $gro->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
-              <a href="#" class="btn btn-danger sup">SUPPRIMER</a>
+              <a href="/gros/delete/{{ $gro->id }}" 
+                class="btn btn-danger" 
+                onclick="return confirm('⚠️ Voulez-vous vraiment supprimer cet utilisateur ?');">
+                SUPPRIMER
+              </a>
             </td>
             
           </tr>

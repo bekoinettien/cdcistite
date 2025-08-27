@@ -32,7 +32,6 @@
 <section class="secttion-1">
     <div class="btn-container">
     <a href="/listepromotions" class="btn btn-success mod" style="margin: 5px;">Ajouter une promotions</a></br>
-    <a href="#" class="btn btn-danger sup" style="margin: 5px;">SUPPRIMER</a>
     </div>
 </section>
 
@@ -67,7 +66,11 @@
             <td>{{ $promotion->end_date }}</td>
             <td>
               <a href="/promotion/edit/{{ $promotion->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
-              <a href="#" class="btn btn-danger sup">SUPPRIMER</a>
+              <a href="/promotion/delete/{{ $promotion->id }}" 
+                class="btn btn-danger" 
+                onclick="return confirm('⚠️ Voulez-vous vraiment supprimer cet utilisateur ?');">
+                SUPPRIMER
+              </a>
             </td>
             
           </tr>

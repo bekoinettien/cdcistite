@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-8" style="background-color: aqua">
+            <div class="col-sm-6 col-md-6 col-lg-8" style="background-color: rgba(153, 155, 155, 0.221)">
                     <p class="details">
                       <i class="fa-solid fa-store me-2 icon-details"></i> {{ $gro->name }}
                     </p>

@@ -193,18 +193,23 @@
                 <ul class="nav nav-treeview">
 
                       <li class="nav-item">
-                        <a href="./examples/login.html" class="nav-link">
+                        <a href="/login" class="nav-link">
                           <i class='fa fa-users'></i>
                           <p>Login</p>
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a href="./examples/register.html" class="nav-link">
+                        <a href="/users" class="nav-link">
                           <i class='fa fa-user-plus'></i>
                           <p>Register</p>
                         </a>
                       </li>
-                    
+                      <li class="nav-item">
+                        <a href="/listeuser" class="nav-link">
+                          <i class='fa fa-user-plus'></i>
+                          <p>Liste des Utilisateurs</p>
+                        </a>
+                      </li>
                   </li>
                 </ul>
               </li>

@@ -61,7 +61,11 @@
 
             <td>
               <a href="/actualite/edit/{{ $actu->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
-              <a href="#" class="btn btn-danger sup">SUPPRIMER</a>
+              <a href="/actualite/delete/{{ $actu->id }}" 
+                class="btn btn-danger" 
+                onclick="return confirm('⚠️ Voulez-vous vraiment supprimer cet utilisateur ?');">
+                SUPPRIMER
+              </a>
             </td>
             
           </tr>

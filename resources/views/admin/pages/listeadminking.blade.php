@@ -31,8 +31,7 @@
 
 <section class="secttion-1">
     <div class="btn-container">
-    <a href="#" class="btn btn-success mod" style="margin: 5px;">Ajouter un nouveau King Cash</a></br>
-    <a href="#" class="btn btn-danger sup" style="margin: 5px;">SUPPRIMER</a>
+    <a href="/king" class="btn btn-success mod" style="margin: 5px;">Ajouter un nouveau King Cash</a></br>
     </div>
 </section>
 
@@ -64,7 +63,11 @@
            
             <td>
               <a href="/king/edit/{{ $kin->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
-              <a href="#" class="btn btn-danger sup">SUPPRIMER</a>
+              <a href="/king/delete/{{ $kin->id }}" 
+                class="btn btn-danger" 
+                onclick="return confirm('⚠️ Voulez-vous vraiment supprimer cet utilisateur ?');">
+                SUPPRIMER
+              </a>
             </td>
             
           </tr>

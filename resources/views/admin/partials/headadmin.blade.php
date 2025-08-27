@@ -27,7 +27,7 @@
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
-                <span class="d-none d-md-inline">BEKOIN CDCI</span>
+                <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
@@ -38,7 +38,7 @@
                     alt="User Image"
                   />
                   <p>
-                    BEKOIN ETINNE - Developpeur Web
+                    {{ Auth::user()->name }} - {{ Auth::user()->fonction ?? 'Utilisateur' }}
                     <small>Membre depuis 18 Aout 2025</small>
                   </p>
                 </li>
@@ -53,7 +53,7 @@
                 <!--begin::Menu Footer-->
                 <li class="user-footer">
                   <a href="#" class="btn btn-default btn-flat">Profil</a>
-                  <a href="#" class="btn btn-default btn-flat float-end">Deconnecter</a>
+                  <a href="/logout" class="btn btn-default btn-flat float-end">Deconnecter</a>
                 </li>
                 <!--end::Menu Footer-->
               </ul>

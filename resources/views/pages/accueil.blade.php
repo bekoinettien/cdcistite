@@ -1,5 +1,10 @@
 @extends('layouts.head')
 @section('content')
+
+    <!-- 🔹 Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
     {{-- DEBUT DE LA SECTION 1 --}}
     <section class="section1">
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">

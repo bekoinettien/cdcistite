@@ -9,6 +9,10 @@ use App\Models\Gros;
 use App\Models\King;
 use App\Models\Accueilcorrousel;
 use App\Models\Promotion;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
 
 class ControllerBackend extends Controller
 {
@@ -59,6 +63,15 @@ class ControllerBackend extends Controller
         $demi->update();
 
         return redirect()->route('listeadmindemi')->with('success', 'Demi mis à jour avec succès !');
+    }
+    public function deleteDemi($id)
+    {
+        $demi = Demi::find($id);
+        if (!$demi) {
+            return redirect()->back()->with('error', 'Demi non trouvé.');
+        }
+        $demi->delete();
+        return redirect()->route('listeadmindemi')->with('success', 'Demi supprimé avec succès !');
     }
     //Fin de la Gestion de demi gros
 
@@ -113,6 +126,15 @@ class ControllerBackend extends Controller
 
         return redirect()->route('listeadmingros')->with('success', 'Gros mis à jour avec succès !');
     }
+    public function deleteGros($id)
+    {
+        $gros = Gros::find($id);
+        if (!$gros) {
+            return redirect()->back()->with('error', 'Gros non trouvé.');
+        }
+        $gros->delete();
+        return redirect()->route('listeadmingros')->with('success', 'Gros supprimé avec succès !');
+    }
     //Fin de la Gestion de gros
 
 
@@ -160,6 +182,15 @@ class ControllerBackend extends Controller
         $king->update();
 
         return redirect()->route('listeadminking')->with('success', 'King mis à jour avec succès !');
+    }
+    public function deleteKing($id)
+    {
+        $king = King::find($id);
+        if (!$king) {
+            return redirect()->back()->with('error', 'King non trouvé.');
+        }
+        $king->delete();
+        return redirect()->route('listeadminking')->with('success', 'King supprimé avec succès !');
     }
 
     //Fin de la Gestion des kings
@@ -209,6 +240,15 @@ class ControllerBackend extends Controller
 
         return redirect()->route('listeadminactualite')->with('success', 'Actualité mise à jour avec succès !');
     }
+    public function deleteActualite($id)
+    {
+        $actualites = Actualite::find($id);
+        if (!$actualites) {
+            return redirect()->back()->with('error', 'Actualité non trouvée.');
+        }
+        $actualites->delete();
+        return redirect()->route('listeadminactualite')->with('success', 'Actualité supprimée avec succès !');
+    }
     //Fin de la Gestion des actualités
 
     
@@ -257,7 +297,16 @@ class ControllerBackend extends Controller
         return redirect()->route('listeadminaccueil')->with('success', 'Élément d\'accueil mis à jour avec succès !');
     }
 
-    
+    public function deleteAccueil($id)
+    {
+        $accueil = Accueilcorrousel::find($id);
+        if (!$accueil) {
+            return redirect()->back()->with('error', 'Élément d\'accueil non trouvé.');
+        }
+        $accueil->delete();
+        return redirect()->route('listeadminaccueil')->with('success', 'Élément d\'accueil supprimé avec succès !');
+    }
+
     //Fin de la Gestion de l'accueil
 
     // debut de la gestion des promotions
@@ -321,10 +370,106 @@ class ControllerBackend extends Controller
 
         return redirect()->route('listeadminpromotions')->with('success', 'Promotion mise à jour avec succès !');
     }   
-    
+    public function deletePromotion($id)
+    {
+        $promotions = Promotion::find($id);
+        if (!$promotions) {
+            return redirect()->back()->with('error', 'Promotion non trouvée.');
+        }
+        $promotions->delete();
+        return redirect()->route('listeadminpromotions')->with('success', 'Promotion supprimée avec succès !');
+    }
     //Fin de la Gestion des promotions
 
-    
+    //USERS
+    public function createUsers(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'fonction' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8',
+        ]);
 
+        // Logic to handle the creation of a User
+        $user = new User();
+        $user->name = $request->input('name');
+        $user->role = 'user';
+        $user->fonction = $request->input('fonction');
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));     
+        $user->save();
+
+        return redirect()->route('login')->with('success', 'Utilisateur créé avec succès ! Vous pouvez maintenant vous connecter.');
+    }
+
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            if(Auth::user()->role == 'admin')
+            {
+              return redirect()->intended('dashboard')->with('success', 'Connexion réussie !');
+            }else{
+                return redirect()->intended('/');
+            }
+
+
+        }else{
+            return back()->withErrors([
+                'email' => 'Les informations d\'identification fournies ne correspondent pas à nos enregistrements.',
+            ])->onlyInput('email');
+        }
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/login')->with('success', 'Vous avez été déconnecté avec succès.');
+    }
+
+    public function updateUser(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'fonction' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+            'password' => 'nullable|string|min:8',
+        ]);
+
+        $user = User::find($id);
+        if (!$user) {
+            return redirect()->back()->with('error', 'Utilisateur non trouvé.');
+        }
+
+        $user->name = $request->input('name');
+        $user->role = $request->input('role');
+        $user->fonction = $request->input('fonction');
+        $user->email = $request->input('email');
+        if ($request->filled('password')) {
+            $user->password = Hash::make($request->input('password'));
+        }
+        $user->update();
+
+        return redirect()->route('listeadminusers')->with('success', 'Utilisateur mis à jour avec succès !');
+    }
+    public function deleteUser($id)
+    {
+        $user = User::find($id);
+        if (!$user) {
+            return redirect()->back()->with('error', 'Utilisateur non trouvé.');
+        }
+        $user->delete();
+        return redirect()->route('listeadminusers')->with('success', 'Utilisateur supprimé avec succès !');
+    }
 }
-

@@ -8,6 +8,7 @@ use App\Models\Demi;
 use App\Models\King;
 use App\Models\Actualite;
 use App\Models\Promotion;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 
@@ -179,4 +180,22 @@ class ControllerPages extends Controller
         return view('admin.pages.listepromotion', compact('promotions'));
     }
     // fin de la gestion du dashboard
+
+    //Gestion des users
+    public function users(){
+        return view('users.registers');
+    }
+    public function login(){
+        return view('users.login');
+    }
+    public function listeAdminUsers(){
+        $users = User::all();
+        return view('users.listeusers', compact('users'));
+    }
+
+    public function editUser($id)
+    {
+        $user = User::find($id);
+        return view('users.edit', compact('user'));
+    }
 }

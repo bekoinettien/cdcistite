@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-8" style="background-color: aqua">
+            <div class="col-sm-6 col-md-6 col-lg-8" style="background-color: rgba(111, 116, 116, 0.222)">
                     <p class="details">
                       <i class="fa-solid fa-store me-2 icon-details"></i> {{ $dem->name }}
                     </p>

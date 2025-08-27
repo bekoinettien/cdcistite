@@ -29,43 +29,39 @@
     }
   </style>
 
-<section class="secttion-1">
-    <div class="btn-container">
-    <a href="/accueil" class="btn btn-success mod" style="margin: 5px;">Ajouter Slide</a></br>
-    </div>
-</section>
-
 <section class="service_section layout_padding">
     <div class="container">
       <div class="titre">
-        <h2> Nos <span>Slides</span></h2>
+        <h2> Nos <span>Utilisateurs</span></h2>
       </div>
       <table>
         <thead>
           <tr>
-            <th>Image</th>
-            <th>Titre</th>
-            <th>Description</th>
-            <th>Date de création</th>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Fonction</th>
+            <th>Role</th>
             <th>Actions</th>
             
           </tr>
         </thead>
         <tbody>
-        @foreach($accueils as $index => $acc)
+        @foreach($users as $index => $user)
           <tr>
-            <td><img src="/storage/accueil/{{ basename($acc->image) }}" style="max-width: 50px; height: 50px; padding-top:10px"></td>
-            <td>{{ $acc->title }}</td>
-            <td>{{ $acc->description }}</td>
-            <td>{{ $acc->created_at }}</td>
+            <td>{{ $user->id }}</td>
+            <td>{{ $user->name }}</td>
+            <td>{{ $user->email }}</td>
+            <td>{{ $user->fonction }}</td>
+            <td>{{ $user->role }}</td>
 
             <td>
-              <a href="/accueil/edit/{{ $acc->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
-              <a href="/accueil/delete/{{ $acc->id }}" 
+              <a href="/users/edit/{{ $user->id }}" class="btn btn-success mod" style="margin-bottom: 5px;">MODIFIER</a></br>
+              <a href="/users/delete/{{ $user->id }}" 
                 class="btn btn-danger" 
                 onclick="return confirm('⚠️ Voulez-vous vraiment supprimer cet utilisateur ?');">
                 SUPPRIMER
-              </a>
+              </a>            
             </td>
             
           </tr>

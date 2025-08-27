@@ -21,6 +21,17 @@
     <link rel="icon" type="image/x-icon" href="images/logo.png">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        // Affiche le loader pendant 2.5 secondes puis cache
+        setTimeout(function(){
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }, 1500); // temps en ms (ici 1.5 secondes)
+    });
+</script>
+
+
 <body>
     <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 255, 255, 0)">
       <div class="container-fluid">
@@ -57,10 +68,15 @@
             <li class="nav-item">
              <a class="nav-link textmenu" href="contacts">CONTACTS</a>
             </li>
+              @auth
 
+            @if(auth()->check() && auth()->user()->role == 'admin')
             <li class="nav-item">
              <a class="nav-link textmenu" href="dashboard">DASHOARD</a>
             </li>
+            @endif
+            @endauth
+            
       
           </ul>
           <form class="d-flex" role="search">

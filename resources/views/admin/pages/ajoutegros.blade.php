@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6">
-            <img src="{{asset('images/images1.jpeg')}}" alt="" class="w-100" style="height: 380px; margin-top: 20px;">
+            <img src="{{asset('images/logo1.png')}}" alt="" class="w-100" style="height: 380px; margin-top: 20px;">
         </div>
         <div class="col-sm-6">
                 <h1>Ajouter un Gros</h1>
