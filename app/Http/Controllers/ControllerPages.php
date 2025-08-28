@@ -9,6 +9,9 @@ use App\Models\King;
 use App\Models\Actualite;
 use App\Models\Promotion;
 use App\Models\User;
+use App\Models\Activite;
+use App\Models\About;
+use App\Models\Aboutsection;
 
 use Illuminate\Http\Request;
 
@@ -25,7 +28,9 @@ class ControllerPages extends Controller
         $king = King::count();
         $accueils = Accueilcorrousel::all();
         $promotions = Promotion::all();
-        return view('pages.accueil', compact('actualites', 'gros', 'demi', 'king', 'accueils', 'promotions'));
+        $activites = Activite::all();
+        $aboutsections = Aboutsection::orderBy('created_at', 'asc')->take(1)->get();
+        return view('pages.accueil', compact('actualites', 'gros', 'demi', 'king', 'accueils', 'promotions', 'activites', 'aboutsections'));
 
     }
     public function accueilviewadd(){
@@ -41,11 +46,11 @@ class ControllerPages extends Controller
     // fin accueil
 
     //debut promotions
-    public function promotions()
-    {
-        $promotions = Promotion::all();
-        return view('pages.promotions', compact('promotions'));
-    }
+    // public function promotions()
+    // {
+    //     $promotions = Promotion::all();
+    //     return view('pages.promotions', compact('promotions'));
+    // }
 
     public function AddPromotions()
     {
@@ -58,6 +63,69 @@ class ControllerPages extends Controller
     }
 
     // fin promotions
+
+    //debut activites
+
+    public function activites()
+    {
+        $activites = Activite::all();
+        return view('pages.activites', compact('activites'));
+    }
+
+    public function AddActivites()
+    {
+        return view('admin.pages.ajoutactivite');
+    }
+
+    public function editActivites($id)
+    {
+        $activites = Activite::find($id);
+        return view('admin.update.updateactivite', compact('activites'));
+    }
+    //fin activites
+
+    // debut de la gestion apropos
+    public function about(){
+        $about = About::all();
+        $aboutsections = Aboutsection::all();
+        return view('pages.about', compact('about', 'aboutsections'));
+
+    }
+
+    public function editAbout($id)
+    {
+        $about = About::find($id);
+        return view('admin.update.updateabout', compact('about'));
+    }
+
+    public function listeAbout(){
+        $about = About::all();
+        return view('admin.pages.ajoutabout', compact('about'));
+    }
+    public function listeAdminAbout(){
+        $about = About::all();
+        return view('admin.pages.listeadminabout', compact('about'));
+    }
+    // Fin de la gestion apropos
+
+    //debut aboutsections
+
+   
+    public function editAboutSection($id)
+    {
+        $aboutsection = Aboutsection::find($id);
+        return view('admin.update.updateaboutsection', compact('aboutsection'));
+    }
+    public function listeAboutSection(){
+        $aboutsections = Aboutsection::all();
+        return view('admin.pages.ajoutaboutsection', compact('aboutsections'));
+    }
+    public function listeAdminAboutSection(){
+        $aboutsections = Aboutsection::all();
+        return view('admin.pages.listeaboutsection', compact('aboutsections'));
+    }
+
+    // fin aboutsections
 
     // debut de la gestion des gros
     public function gros()
@@ -133,14 +201,6 @@ class ControllerPages extends Controller
     // fin de la gestion des actualités
 
 
-
-    // debut de la gestion apropos
-    public function about(){
-        return view('pages.about');
-    }
-    // Fin de la gestion apropos
-
-
     // debut de la gestion dashboard
     public function dashboard(){
         $gros = Gros::count();
@@ -178,6 +238,11 @@ class ControllerPages extends Controller
     public function listeAdminPromotions(){
         $promotions = Promotion::all();
         return view('admin.pages.listepromotion', compact('promotions'));
+    }
+
+    public function listeAdminActivites(){
+        $activites = Activite::all();
+        return view('admin.pages.listeactivite', compact('activites'));
     }
     // fin de la gestion du dashboard
 

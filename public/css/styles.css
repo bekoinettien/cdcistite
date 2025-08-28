@@ -120,8 +120,11 @@
         background-color: rgba(13, 13, 116, 0.866);
         border-radius: 4%;
     }
-    
-    
+
+    /* DEBUT SECTION 5 */
+    .boutonactivites{
+        display: none;
+    }
 
 }
 
@@ -252,6 +255,10 @@
         padding: 50px 0;
         background-color: rgba(13, 13, 116, 0.866);
         border-radius: 4%;
+    }
+      /* DEBUT SECTION 5 */
+    .boutonactivites{
+        display: none;
     }
 
 }
@@ -816,4 +823,72 @@
     
 
 }
+
+
+
+/* footer */
+/* Styliser les icônes */
+.icon-foot i {
+    font-style: normal; /* Supprime l'italique par défaut */
+    color: rgb(213, 134, 15); /* Ajuste la couleur (blanc dans ce cas) */
+    margin-right: 8px; /* Ajoute un espace entre l'icône et le texte */
+}
+
+/* Aligner le texte et les icônes */
+.icon-foot li {
+    text-decoration: none; /* Supprime tout soulignement */
+    display: flex; /* Met les icônes et le texte sur la même ligne */
+    align-items: center; /* Centre verticalement l'icône et le texte */
+    margin-bottom: 10px; /* Espacement entre les lignes */
+    color: white; /* Couleur blanche pour le texte */
+    font-size: 16px; /* Taille du texte */
+}
+
+.titrefoot h1{
+    text-align: center;
+}
+
+.fa-envelope{
+    font-size: 25px;
+    margin-top: -5px;
+}
+.fa-location-dot{
+    font-size: 25px;
+}
+.fa-phone{
+    font-size: 25px;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance par rapport au bas de la fenêtre */
+    right: 20px; /* Distance par rapport au côté droit */
+    display: none; /* Caché par défaut */
+    z-index: 1000;
+    background-color: #007bff; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, background-color 0.3s;
+  }
+  
+  #back-to-top:hover {
+    background-color: #0056b3;
+  }
+
+  a.foot{
+    text-decoration: none;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: rgb(0, 0, 0) !important;
+   
+   
+}
+   /* fin bout de revoie auto direction */
+
 

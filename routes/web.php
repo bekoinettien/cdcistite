@@ -15,15 +15,30 @@ Route::post('/accueil/update/{id}',[ControllerBackend::class,'updateAccueil'])->
 Route::get('/accueil/delete/{id}',[ControllerBackend::class,'deleteAccueil'])->name('deleteAccueil');
 
 // Route pour les promotions
-Route::get('/promotions',[ControllerPages::class,'promotions'])->name('promotions');
 Route::post('/promotions/create',[ControllerBackend::class,'createPromotions'])->name('create.Promotion');
 Route::get('/promotion/edit/{id}',[ControllerPages::class,'editPromotion'])->name('editPromotion');
 Route::post('/promotion/update/{id}',[ControllerBackend::class,'updatePromotion'])->name('updatePromotion');
 Route::get('/promotion/delete/{id}',[ControllerBackend::class,'deletePromotion'])->name('deletePromotion');
 
+//route pour les activites
+Route::get('/activites',[ControllerPages::class,'activites'])->name('activites');
+Route::post('/activites/create',[ControllerBackend::class,'createActivites'])->name('create.Activites');
+Route::get('/activites/edit/{id}',[ControllerPages::class,'editActivites'])->name('editActivites');
+Route::post('/activites/update/{id}',[ControllerBackend::class,'updateActivites'])->name('updateActivites');
+Route::get('/activites/delete/{id}',[ControllerBackend::class,'deleteActivites'])->name('deleteActivites');
+
 //about
 Route::get('/about',[ControllerPages::class,'about']);
+Route::post('/about/create',[ControllerBackend::class,'createAbout'])->name('create.About');
+Route::get('/about/edit/{id}',[ControllerPages::class,'editAbout'])->name('editAbout');
+Route::post('/about/update/{id}',[ControllerBackend::class,'updateAbout'])->name('updateAbout');
+Route::get('/about/delete/{id}',[ControllerBackend::class,'deleteAbout'])->name('deleteAbout');
 
+//aboutsections
+Route::post('/aboutsection/create',[ControllerBackend::class,'createAboutSection'])->name('create.AboutSection');
+Route::get('/aboutsection/edit/{id}',[ControllerPages::class,'editAboutSection'])->name('editAboutSection');
+Route::post('/aboutsection/update/{id}',[ControllerBackend::class,'updateAboutSection'])->name('updateAboutSection');
+Route::get('/aboutsection/delete/{id}',[ControllerBackend::class,'deleteAboutSection'])->name('deleteAboutSection');
 
 //gros
 Route::post('/gros/create',[ControllerBackend::class,'createGros'])->name('create.Gros');
@@ -60,6 +75,9 @@ Route::middleware([CheckRole::class])->group(function () {
     Route::get('/dashboard',[ControllerPages::class,'dashboard'])->name('dashboard');
     Route::get('/accueil',[ControllerPages::class,'accueilviewadd']);
     Route::get('/listepromotions',[ControllerPages::class,'AddPromotions']);
+    Route::get('/listeactivites',[ControllerPages::class,'AddActivites']);
+    Route::get('/listeabout',[ControllerPages::class,'listeAbout']);
+    Route::get('/listeaboutsection',[ControllerPages::class,'listeAboutSection'])->name('listeaboutsection');
     Route::get('/gros',[ControllerPages::class,'gros'])->name('gros');
     Route::get('/demi',[ControllerPages::class,'demi'])->name('demi.store');
     Route::get('/king',[ControllerPages::class,'king'])->name('king');
@@ -71,7 +89,10 @@ Route::middleware([CheckRole::class])->group(function () {
     Route::get('/listeadminactualite',[ControllerPages::class,'listeAdminActualite'])->name('listeadminactualite');
     Route::get('/listeadminaccueil',[ControllerPages::class,'listeAdminAccueil'])->name('listeadminaccueil');
     Route::get('/listeadminpromotions',[ControllerPages::class,'listeAdminPromotions'])->name('listeadminpromotions');
-    
+    Route::get('/listeadminactivites',[ControllerPages::class,'listeAdminActivites'])->name('listeadminactivites');
+    Route::get('/listeadminabout',[ControllerPages::class,'listeAdminAbout'])->name('listeadminabout');
+    Route::get('/listeadminaboutsection',[ControllerPages::class,'listeAdminAboutSection'])->name('listeadminaboutsection');   
+
 
 
     //USERS

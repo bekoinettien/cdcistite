@@ -74,13 +74,13 @@
                       </li>
 
                       <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/listeactivites" class="nav-link">
                           <i class='fa fa-file-text'></i>
                           <p>Ajouter une activités</p>
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/listeadminactivites" class="nav-link">
                          <i class='fa fa-bell'></i>
                           <p>Liste des Activités</p>
                         </a>
@@ -90,6 +90,45 @@
                 </ul>
               </li>
               <hr style="border: 1px solid white; margin: 10px 0;">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                  <p>
+                    About
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="/listeabout" class="nav-link">
+                          <i class='fa fa-code'></i>
+                          <p>Ajouter un slide About</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="/listeadminabout" class="nav-link">
+                          <i class='fa fa-book'></i>
+                          <p>Liste des Slides</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="/listeaboutsection" class="nav-link">
+                          <i class='fa fa-book'></i>
+                          <p>Ajouter une Section</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="/listeadminaboutsection" class="nav-link">
+                          <i class='fa fa-book'></i>
+                          <p>Liste des Sections</p>
+                        </a>
+                      </li>
+                  </li>
+                </ul>
+              </li>
+
+              <hr style="border: 1px solid white; margin: 10px 0;">
+
               <li class="nav-header">Gestion des sites</li>
               <li class="nav-item">
                 <a href="#" class="nav-link">

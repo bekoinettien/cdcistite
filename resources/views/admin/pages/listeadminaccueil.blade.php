@@ -1,6 +1,4 @@
 @extends('admin.layout.dashboard')
-
-
 @section('content')
 
 <style>
@@ -74,6 +72,5 @@
       </table>
     </div>
 </section>
-
 </body>
 @endsection

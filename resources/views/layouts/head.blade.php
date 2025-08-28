@@ -29,6 +29,27 @@
             document.getElementById("content").style.display = "block";
         }, 1500); // temps en ms (ici 1.5 secondes)
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.getElementById("back-to-top");
+
+    // Affiche le bouton après avoir défilé de 200px
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    });
+
+    // Ajoute l'effet de retour en haut
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Défilement fluide
+      });
+    });
+  });
 </script>
 
 
@@ -87,6 +108,13 @@
      </div>
     </nav>
 @yield('content')
+  <button id="back-to-top" class="btn btn-secondary" title="Revenir en haut">
+          ↑
+  </button>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<br>
+<br>
+<br>
+@extends('layouts.foot')
 </html>

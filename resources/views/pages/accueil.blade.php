@@ -8,7 +8,7 @@
     {{-- DEBUT DE LA SECTION 1 --}}
     <section class="section1">
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+        <div class="carousel-inner">
         @foreach ($accueils as $key => $item)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                 <img src="/storage/accueil/{{ basename($item->image) }}" 
@@ -23,16 +23,16 @@
     </div>
 
     <!-- Boutons précédent et suivant -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Précédent</span>
-    </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+        </button>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Suivant</span>
-    </button>
-</div>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+        </button>
+    </div>
 
     </section>
 
@@ -127,7 +127,7 @@
     <br>
     <br>
     {{-- DEBUT DE LA SECTION 2 --}}
-    <section class="section2 "> 
+    {{-- <section class="section2 "> 
         <div class="row container-fluid">
             <div class="col-sm-6 col-12 col-lg-6 col-md-6">
                 <img src="{{asset('images/images13.jpeg')}}" alt="" class="img-fluid imagesection2">
@@ -141,7 +141,7 @@
                      ratione eos expedita similique!</p>
             </div>
         </div>
-    </section>
+    </section> --}}
     {{-- FIN DE LA SECTION 2 --}}
     <br>
     <br>
@@ -250,8 +250,34 @@
     {{-- FIN DE LA SECTION 4 --}}
         <br>
         <br>
-   <section>
+   <section class="container section_6">
        <h2 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);">Nos Activités</h2>
        <p style="text-align: center; font-size: 14px;">En savoir plus sur notre entreprise et nos valeurs.</p>
+       <div class="row">
+            @foreach ($activites as $item)
+                <div class="col-md-4 accueilactu " style="padding-bottom: 20px;">
+                    <div class="box-service" >
+                        <img src="/storage/activites/{{ basename($item->image) }}" class="img-fluid w-100" alt="{{ $item->title }}">
+                        <div class="card-body">
+                            <h5 class="card-title " style="text-align: center; font-weight: bold; font-size: 25px;">{{ $item->title }}</h5>
+                            <br>
+                            <p class="card-text">{{ $item->description }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+            <div class="row boutonactivites">
+                <div class="col-md-4 text-center">
+                    <a href="{{ route('listegros.store', $item->id) }}" class="btn btn-primary">Voir Plus</a>
+               </div>
+               <div class="col-md-4 text-center">
+                    <a href="{{ route('listedemi.store', $item->id) }}" class="btn btn-primary">Voir Plus</a>
+               </div>
+               <div class="col-md-4 text-center">
+                    <a href="{{ route('listking.store', $item->id) }}" class="btn btn-primary">Voir Plus</a>
+               </div>
+            </div>
+               
+        </div>
    </section>
 @endsection

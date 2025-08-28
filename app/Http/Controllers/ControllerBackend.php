@@ -10,6 +10,9 @@ use App\Models\King;
 use App\Models\Accueilcorrousel;
 use App\Models\Promotion;
 use App\Models\User;
+use App\Models\Activite;
+use App\Models\About;
+use App\Models\Aboutsection;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
@@ -380,6 +383,188 @@ class ControllerBackend extends Controller
         return redirect()->route('listeadminpromotions')->with('success', 'Promotion supprimée avec succès !');
     }
     //Fin de la Gestion des promotions
+
+
+    //debut de la gestion des Activites
+        public function createActivites(Request $request)
+        {
+            $request->validate([
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'title' => 'required|string|max:255',
+                'description' => 'required|string',
+            ]);
+
+            // Logic to handle the creation of an Activite
+            $activite = new Activite();
+            if ($request->hasFile('image')) {
+                // Sauvegarder l'image
+                $imagePath = $request->file('image')->store('activites', 'public');
+                $activite->image = $imagePath;
+            }
+            $activite->title = $request->input('title');
+            $activite->description = $request->input('description');
+            $activite->save();
+
+            return redirect()->back()->with('success', 'Activité ajoutée avec succès !');
+        }
+
+        public function updateActivites(Request $request, $id)
+        {
+            $request->validate([
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'title' => 'required|string|max:255',
+                'description' => 'required|string',
+            ]);
+
+            $activite = Activite::find($id);
+            if (!$activite) {
+                return redirect()->back()->with('error', 'Activité non trouvée.');
+            }
+
+            if ($request->hasFile('image')) {
+                // Sauvegarder la nouvelle image
+                $imagePath = $request->file('image')->store('activites', 'public');
+                $activite->image = $imagePath;
+            }
+            $activite->title = $request->input('title');
+            $activite->description = $request->input('description');
+            $activite->update();
+
+            return redirect()->route('listeadminactivites')->with('success', 'Activité mise à jour avec succès !');
+        }
+
+        public function deleteActivite($id)
+        {
+            $activite = Activite::find($id);
+            if (!$activite) {
+                return redirect()->back()->with('error', 'Activité non trouvée.');
+            }
+            $activite->delete();
+            return redirect()->route('listeadminactivites')->with('success', 'Activité supprimée avec succès !');
+        }
+
+    //Fin de la Gestion des activités
+
+
+    // debut de la gestion apropos
+     public function createAbout(Request $request){
+        $request->validate([
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+
+        // Logic to handle the creation of an About
+        $about = new About();
+        if ($request->hasFile('image')) {
+            // Sauvegarder l'image
+            $imagePath = $request->file('image')->store('about', 'public');
+            $about->image = $imagePath;
+        }
+        $about->title = $request->input('title');
+        $about->description = $request->input('description');
+        $about->save();
+
+        return redirect()->back()->with('success', 'Section À propos ajoutée avec succès !');
+
+    }
+
+    public function updateAbout(Request $request, $id)
+    {
+        $request->validate([
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+
+        $about = About::find($id);
+        if (!$about) {
+            return redirect()->back()->with('error', 'Section À propos non trouvée.');
+        }
+
+        if ($request->hasFile('image')) {
+            // Sauvegarder la nouvelle image
+            $imagePath = $request->file('image')->store('about', 'public');
+            $about->image = $imagePath;
+        }
+        $about->title = $request->input('title');
+        $about->description = $request->input('description');
+        $about->update();
+
+        return redirect()->route('listeadminabout')->with('success', 'Section À propos mise à jour avec succès !');
+    }
+    public function deleteAbout($id)
+    {
+        $about = About::find($id);
+        if (!$about) {
+            return redirect()->back()->with('error', 'Section À propos non trouvée.');
+        }
+        $about->delete();
+        return redirect()->route('listeadminabout')->with('success', 'Section À propos supprimée avec succès !');
+    }
+
+    // Fin de la gestion apropos
+
+    //debut gestion section about
+
+    public function createAboutSection(Request $request)
+    {
+        $request->validate([
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+
+        // Logic to handle the creation of an About Section
+        $aboutSection = new Aboutsection();
+        if ($request->hasFile('image')) {
+            // Sauvegarder l'image
+            $imagePath = $request->file('image')->store('aboutsections', 'public');
+            $aboutSection->image = $imagePath;
+        }
+        $aboutSection->title = $request->input('title');
+        $aboutSection->description = $request->input('description');
+        $aboutSection->save();
+
+        return redirect()->back()->with('success', 'Section À propos ajoutée avec succès !');
+    }
+
+    public function updateAboutSection(Request $request, $id)
+    {
+        $request->validate([
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+
+        $aboutSection = Aboutsection::find($id);
+        if (!$aboutSection) {
+            return redirect()->back()->with('error', 'Section À propos non trouvée.');
+        }
+
+        if ($request->hasFile('image')) {
+            // Sauvegarder la nouvelle image
+            $imagePath = $request->file('image')->store('aboutsections', 'public');
+            $aboutSection->image = $imagePath;
+        }
+        $aboutSection->title = $request->input('title');
+        $aboutSection->description = $request->input('description');
+        $aboutSection->update();
+
+        return redirect()->route('listeadminaboutsection')->with('success', 'Section À propos mise à jour avec succès !');
+    }
+
+    public function deleteAboutSection($id)
+    {
+        $aboutSection = Aboutsection::find($id);
+        if (!$aboutSection) {
+            return redirect()->back()->with('error', 'Section À propos non trouvée.');
+        }
+        $aboutSection->delete();
+        return redirect()->route('listeadminaboutsection')->with('success', 'Section À propos supprimée avec succès !');
+    }
+
+    //fin gestion section about
 
     //USERS
     public function createUsers(Request $request)
