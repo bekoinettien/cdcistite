@@ -23,11 +23,11 @@
         <div class="row">
 
             @foreach($king as $index => $kng)
-            <div class="col-sm-6 col-md-6 col-lg-4">
+            <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="box-service" style="padding: 5% ; margin-bottom: 20px;">
                     <div >
                         <!-- Image -->
-                        <img src="/storage/king/{{ basename($kng->image) }}" class="img-image mb-3">
+                        <img src="/storage/king/{{ basename($kng->image) }}" class="img-image">
 
                         <!-- Name -->
                         <p class="details">
@@ -40,22 +40,22 @@
                         </p>
 
                         <!-- Description -->
-                        <p class="details">
+                        {{-- <p class="details">
                             <i class="fa-solid fa-info-circle me-2 icon-details"></i> {{ $kng->description }}
-                        </p>
+                        </p> --}}
 
                         <!-- Horaire (ouvre modal) -->
-                        <p class=" text-primary" 
+                        {{-- <p class=" text-primary" 
                            style="cursor:pointer;"
                            data-bs-toggle="modal" 
                            data-bs-target="#horaireModal{{ $index }}">
                             <i class="fa-solid fa-clock me-2 icon-details"></i> Voir les horaires
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
             </div>
 
-            <!-- Modal -->
+            {{-- <!-- Modal -->
             <div class="modal fade" id="horaireModal{{ $index }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             @endforeach
 
         </div>

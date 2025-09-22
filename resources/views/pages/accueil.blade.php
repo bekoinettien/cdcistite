@@ -14,7 +14,7 @@
                 <img src="/storage/accueil/{{ basename($item->image) }}" 
                      class="d-block w-100 imageprincipale" 
                      alt="{{ $item->title }}">
-                <div class="carousel-caption d-none d-md-block text1">
+                <div class=" text1">
                     <h2 class="animated-text">{{ $item->title }}</h2>
                     <p>{{ $item->description }}</p>
                 </div>
@@ -86,8 +86,8 @@
         }
         
         .logo-item img {
-            max-width: 300px;
-            max-height: 100px;
+            max-width: 800px !important;
+            max-height: 2500px !important;
             border-radius: 15px;
             object-fit: contain;
         }
@@ -152,66 +152,71 @@
         </div>
         <br>
         <div class="row container-fluid section3 ">
-            <div class="col-sm-2">
+            <div class="col-sm-  col-md-2 col-4">
                 <div style="text-align: center">
-                    
-                    <i class="fa-solid fa-store" ></i>
+
+                    <i class="fa-solid fa-store iconchiffres"></i>
                     <br>
                     <br>
-                     <h2 style="text-align: center; font-weight: bold; font-size: 35px; color: rgb(255, 255, 255);">{{ $gros }}+</h2>
-                    <p style="text-align: center; color: rgb(255, 255, 255);">Site de Gros</p>
+                     <h2 class="titreiconchiffres">{{ $gros }}+</h2>
+                    <p class="texticonchiffres">Site de Gros</p>
                 </div>
                
             </div>
-            <div class="col-sm-2">
+            <br>
+            <div class="col-sm-4  col-md-2 col-4">
                 <div style="text-align: center">
 
-                    <i class="fa-solid fa-cash-register" ></i>
+                    <i class="fa-solid fa-cash-register iconchiffres"></i>
                     <br>
                     <br>
-                     <h2 style="text-align: center; font-weight: bold; font-size: 35px; color: rgb(255, 255, 255);">{{ $demi + $king }}+</h2>
-                    <p style="text-align: center; color: rgb(255, 255, 255);">Site de Details</p>
+                     <h2 class="titreiconchiffres">{{ $demi + $king }}+</h2>
+                    <p class="texticonchiffres">Site de Details</p>
                 </div>
             </div>
-            <div class="col-sm-2">
+            <br>
+            <div class="col-sm-4  col-md-2 col-4">
                 <div style="text-align: center">
 
-                    <i class="fa-solid fa-location-dot" ></i>
+                    <i class="fa-solid fa-location-dot iconchiffres"></i>
                     <br>
                     <br>
-                     <h2 style="text-align: center; font-weight: bold; font-size: 35px; color: rgb(255, 255, 255);">{{$gros + $demi + $king }}+</h2>
-                    <p style="text-align: center; color: rgb(255, 255, 255);">Point de Vente</p>
+                     <h2 class="titreiconchiffres">{{$gros + $demi + $king }}+</h2>
+                    <p class="texticonchiffres">Point de Vente</p>
+                </div>
+                <br>
+            </div>
+            <div class="col-sm-4  col-md-2 col-4">
+                <div style="text-align: center">
+
+                    <i class="fa-solid fa-handshake iconchiffres"></i>
+                    <br>
+                    <br>
+                     <h2 class="titreiconchiffres">300+</h2>
+                    <p class="texticonchiffres">Partenaires</p>
                 </div>
             </div>
-            <div class="col-sm-2">
+            <br>
+              <div class="col-sm-4  col-md-2 col-4">
                 <div style="text-align: center">
 
-                    <i class="fa-solid fa-handshake"></i>
+                    <i class="fa-solid fa-hand-holding-dollar iconchiffres"></i>
                     <br>
                     <br>
-                     <h2 style="text-align: center; font-weight: bold; font-size: 35px; color: rgb(255, 255, 255);">300+</h2>
-                    <p style="text-align: center; color: rgb(255, 255, 255);">Partenaires</p>
-                </div>
-            </div>
-              <div class="col-sm-2">
-                <div style="text-align: center">
-
-                    <i class="fa-solid fa-hand-holding-dollar"></i>
-                    <br>
-                    <br>
-                     <h2 style="text-align: center; font-weight: bold; font-size: 35px; color: rgb(255, 255, 255);">110Mrd+</h2>
-                    <p style="text-align: center; color: rgb(255, 255, 255);">Chiffres d'affaires</p>
+                     <h2 class="titreiconchiffres">110Mrd+</h2>
+                    <p class="texticonchiffres">Chiffres d'affaires</p>
                 </div>
                
             </div>
-            <div class="col-sm-2">
+            <br>
+            <div class="col-sm-4 col-md-2 col-4">
                 <div style="text-align: center">
 
-                    <i class="fa-solid fa-people-group"></i>
+                    <i class="fa-solid fa-people-group iconchiffres"></i>
                     <br>
                     <br>
-                     <h2 style="text-align: center; font-weight: bold; font-size: 35px; color: rgb(255, 255, 255);">2M+</h2>
-                    <p style="text-align: center; color: rgb(255, 255, 255);">Employées</p>
+                     <h2 class="titreiconchiffres">2M+</h2>
+                    <p class="texticonchiffres">Employées</p>
                 </div>
             </div>
             
@@ -230,14 +235,14 @@
         </div>
         <div class="row">
             @foreach ($actualites as $item)
-                <div class="col-md-4 accueilactu " style="padding-bottom: 20px;">
-                    <div class="box-service" >
+                <div class="col-md-4 col-lg-3 col-sm-6 col-12 accueilactu " style="padding-bottom: 20px;">
+                    <div class="box-servicehome" >
                         <img src="/storage/actualite/{{ basename($item->image) }}" class="img-fluid w-100" alt="{{ $item->title }}">
                         <div class="card-body">
                             <h5 class="card-title " style="text-align: center; font-weight: bold; font-size: 25px;">{{ $item->location }}</h5>
                             <br>
-                            <p class="card-text">{{ $item->description }}</p>
-                            <p style="text-align: center; color: rgb(233, 22, 22); font-size: 18px;"><small>Date de pub : {{ $item->created_at->format('d/m/Y') }}</small></p>
+                            <p class="card-text" style="text-align: center">{{ $item->description }}</p>
+                            <p class="date-pub" style="text-align: center; color: rgb(233, 22, 22); font-size: 18px;"><small>Date de pub : {{ $item->created_at->format('d/m/Y') }}</small></p>
                         </div>
                     </div>
                 </div>
@@ -251,15 +256,15 @@
         <br>
         <br>
    <section class="container section_6">
-       <h2 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);">Nos Activités</h2>
+       <h2 style="text-align: center; font-weight: bold; font-size: 36px; color: rgb(255, 116, 2);">Nos Services</h2>
        <p style="text-align: center; font-size: 14px;">En savoir plus sur notre entreprise et nos valeurs.</p>
        <div class="row">
             @foreach ($activites as $item)
-                <div class="col-md-4 accueilactu " style="padding-bottom: 20px;">
-                    <div class="box-service" >
-                        <img src="/storage/activites/{{ basename($item->image) }}" class="img-fluid w-100" alt="{{ $item->title }}">
-                        <div class="card-body">
-                            <h5 class="card-title " style="text-align: center; font-weight: bold; font-size: 25px;">{{ $item->title }}</h5>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-12 accueilactu " style="padding-bottom: 20px;">
+                    <div class="box-activite" >
+                        <img src="/storage/activites/{{ basename($item->image) }}" class="img-fluid w-100 image_boxhome" alt="{{ $item->title }}">
+                        <div class="card-body" >
+                            <h5 class="card-title " >{{ $item->title }}</h5>
                             <br>
                             <p class="card-text">{{ $item->description }}</p>
                         </div>

@@ -18,30 +18,28 @@
             <h2> Nos Site <span>Demi-Gros</span></h2>
         </div>
         <br>
-         @foreach($demi as $index => $dem)
-        <div class="row box-service mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
-
-            <div class="col-sm-6 col-md-6 col-lg-4 " >
-                <div  style="padding: 5% ; margin-bottom: 20px;">
+         
+        <div class="row">
+            @foreach($demi as $index => $dem)
+            <div class="col-sm-6 col-md-4 col-lg-4 " >
+                 <div class="box-service" style="padding: 3% ; margin-bottom: 60px;">
                     <div>
                         <!-- Image -->
                         <img src="/storage/demi/{{ basename($dem->image) }}" class="img-image mb-3">    
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-8" style="background-color: rgba(111, 116, 116, 0.222)">
                     <p class="details">
                       <i class="fa-solid fa-store me-2 icon-details"></i> {{ $dem->name }}
                     </p>
                         <p class="details">
                             <i class="fa-solid fa-location-dot me-2 icon-details"></i> {{ $dem->location }}
                         </p>
-                        <p class="details">
+                        {{-- <p class="details">
                             <i class="fa-solid fa-info-circle me-2 icon-details"></i> {{ $dem->description }}
-                        </p>
-            </div>  
+                        </p> --}}
+                </div>
+            </div> 
+            @endforeach
         </div>
-        @endforeach
     </div>
 </section>
 

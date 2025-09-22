@@ -1,6 +1,94 @@
 /* les plus petits écrans */
+@media (min-width: 0px )and (max-width: 350px) {
+      
+    .box-servicehome {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 390px !important;
+        
+    }
+    .box-servicehome:hover {
+        transform: scale(1.05);
+    }
 
-@media (min-width: 0px )and (max-width: 576px) { 
+    .date-pub{
+        font-size: 12px;
+        color: rgb(233, 22, 22);
+        font-weight: bold;
+    }
+
+    .box-activite {
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 300px !important;
+        
+    }
+    .box-activite:hover {
+        transform: scale(1.05);
+    }
+    .card-title{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .card-text{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .iconchiffres{
+        font-size: 30px !important;
+        color: rgb(255, 255, 255);
+    }
+    .titreiconchiffres{
+        text-align: center; 
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .texticonchiffres{
+        text-align: center; 
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+    }
+    .text1 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        position: absolute;
+
+        
+    }
+        .textmenu{
+        color: rgb(17, 26, 152) !important;
+        text-transform: uppercase;
+    }
+    .imageprincipale {
+        height: 30vh;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);   
+    }
+
+}
+
+@media (min-width: 351px )and (max-width: 576px) { 
 
        /* debut nav */
     .textmenu{
@@ -13,11 +101,12 @@
 
     /* debut Image principal accueil */
     .imageprincipale {
-        height: 70vh;
+        height: 40vh;
         margin-top: 2px;
         object-fit: cover;
         filter: brightness(50%);   
     }
+ 
 
        /* Fin Image principal accueil */
 
@@ -66,61 +155,91 @@
 
     /* Fin Animation  du texte d'accueil */
 
-    .text1 {
-     font-size: 16px;
-     top: 30%;
+   .text1 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        position: absolute;
+
+        
     }
 
     /* FIN SECTION 1 */
 
     /* DEBUT SECTION 2 */
 
-    .section2 {
-        padding: 50px 0;
-        background-color: rgba(21, 21, 28, 0.071);
-        border-radius: 4%;
-    }
-    .imagesection2{
-        border-radius: 5%;
-        margin-left:10%;
-        margin-right:10%;
-        width: auto;
-    }
-    .titresection2 {
-        color: rgb(27, 10, 126);
-        font-size: 30px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: center;
-    }
-    .textsection2 {
-        color: rgb(6, 0, 0);
-        font-size: 18px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    /* FIN SECTION 2 */
-    /* DEBUT SECTION 3 */
-    .section3 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 87, 0.866);
-        border-radius: 4%;
-    }
-    .imagesection3 {
-        border-radius: 5%;
+    
+    /* DEBUT SECTION4 */
+    
+    .box-servicehome {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        padding-bottom: 50px !important;
         
     }
-    /* FIN SECTION 3 */
-    /* DEBUT SECTION4 */
-    .section4 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
-        border-radius: 4%;
+    .box-servicehome:hover {
+        transform: scale(1.05);
+    }
+    .image_boxhome{
+        height: 150px !important;
+        object-fit: cover;
+        width: 25px;
+    }
+    .date-pub{
+        font-size: 12px;
+        color: rgb(233, 22, 22);
+        font-weight: bold;
     }
 
+    .box-activite {
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 300px !important;
+        
+    }
+    .box-activite:hover {
+        transform: scale(1.05);
+    }
+    .card-title{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .card-text{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .iconchiffres{
+        font-size: 30px !important;
+        color: rgb(255, 255, 255);
+    }
+    .titreiconchiffres{
+        text-align: center; 
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .texticonchiffres{
+        text-align: center; 
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+    }
     /* DEBUT SECTION 5 */
     .boutonactivites{
         display: none;
@@ -144,12 +263,22 @@
 
     /* debut Image principal accueil */
     .imageprincipale {
-        height: 90vh;
+        height: 50vh;
         margin-top: 2px;
         object-fit: cover;
         filter: brightness(50%);   
     }
+ 
+     .text1 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        position: absolute;
 
+        
+    }
        /* Fin Image principal accueil */
 
 
@@ -197,46 +326,10 @@
 
     /* Fin Animation  du texte d'accueil */
 
-   .text1 {
-     position: absolute;
-     top: 55%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     text-align: center;
-     color: white;
-     z-index: 2; /* Au-dessus de la superposition */
-    }
-
-    /* FIN SECTION 1 */
-
     /* DEBUT SECTION 2 */
 
-    .section2 {
-        padding: 50px 0;
-        background-color: rgba(21, 21, 28, 0.071);
-        border-radius: 4%;
-    }
-    .imagesection2{
-        border-radius: 5%;
-        margin-left:10%;
-        margin-right:10%;
-        width: auto;
-    }
-    .titresection2 {
-        color: rgb(27, 10, 126);
-        font-size: 30px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: center;
-    }
-    .textsection2 {
-        color: rgb(6, 0, 0);
-        font-size: 18px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
+    
+   
 
     /* FIN SECTION 2 */
     /* DEBUT SECTION 3 */
@@ -251,10 +344,69 @@
     }
     /* FIN SECTION 3 */
     /* DEBUT SECTION4 */
-    .section4 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
-        border-radius: 4%;
+       .box-servicehome {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 350px !important;
+        
+    }
+    .box-servicehome:hover {
+        transform: scale(1.05);
+    }
+
+    .date-pub{
+        font-size: 12px;
+        color: rgb(233, 22, 22);
+        font-weight: bold;
+    }
+
+        .box-activite {
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 300px !important;
+        
+    }
+    .box-activite:hover {
+        transform: scale(1.05);
+    }
+    .card-title{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .card-text{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .iconchiffres{
+        font-size: 30px !important;
+        color: rgb(255, 255, 255);
+    }
+    .titreiconchiffres{
+        text-align: center; 
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .texticonchiffres{
+        text-align: center; 
+        color: rgb(255, 255, 255);
+        font-size: 14px;
     }
       /* DEBUT SECTION 5 */
     .boutonactivites{
@@ -278,12 +430,12 @@
 
     /* debut Image principal accueil */
     .imageprincipale {
-        height: 90vh;
+        height: 60vh;
         margin-top: 2px;
         object-fit: cover;
         filter: brightness(50%);   
     }
-
+  
        /* Fin Image principal accueil */
 
 
@@ -343,62 +495,77 @@
 
     /* FIN SECTION 1 */
 
-    /* DEBUT SECTION 2 */
-
-    .section2 {
-        padding: 50px 0;
-        background-color: rgba(21, 21, 28, 0.071);
-        border-radius: 4%;
-    }
-    .imagesection2{
-        border-radius: 5%;
-        margin-left:10%;
-        margin-right:10%;
-        width: auto;
-    }
-    .titresection2 {
-        color: rgb(27, 10, 126);
-        font-size: 30px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: center;
-    }
-    .textsection2 {
-        color: rgb(6, 0, 0);
-        font-size: 18px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    /* FIN SECTION 2 */
-    /* DEBUT SECTION 3 */
-    .section3 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 87, 0.866);
-        border-radius: 4%;
-    }
-    .imagesection3 {
-        border-radius: 5%;
+    /* DEBUT SECTION4 */
+        .box-servicehome {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 350px !important;
         
     }
-    /* FIN SECTION 3 */
-    /* DEBUT SECTION4 */
-    .section4 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
-        border-radius: 4%;
+    .box-servicehome:hover {
+        transform: scale(1.05);
+    }
+
+    .date-pub{
+        font-size: 12px;
+        color: rgb(233, 22, 22);
+        font-weight: bold;
+    }
+        .box-activite {
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 300px !important;
+        
+    }
+    .box-activite:hover {
+        transform: scale(1.05);
+    }
+    .card-title{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .card-text{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .iconchiffres{
+        font-size: 30px !important;
+        color: rgb(255, 255, 255);
+    }
+    .titreiconchiffres{
+        text-align: center; 
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .texticonchiffres{
+        text-align: center; 
+        color: rgb(255, 255, 255);
+        font-size: 14px;
     }
 
 }
 
 
 
-
-
 /* les écrans larges*/
-@media (min-width: 992px) and (max-width:1200px) { 
+@media (min-width: 993px) and (max-width:1200px) { 
 
    /* debut nav */
     .textmenu{
@@ -411,11 +578,12 @@
 
     /* debut Image principal accueil */
     .imageprincipale {
-        height: 550px;
+        height: 70vh;
         margin-top: 2px;
         object-fit: cover;
         filter: brightness(50%);   
     }
+   
 
        /* Fin Image principal accueil */
 
@@ -478,58 +646,75 @@
 
     /* DEBUT SECTION 2 */
 
-    .section2 {
-        padding: 50px 0;
-        background-color: rgba(21, 21, 28, 0.071);
-        border-radius: 4%;
-    }
-    .imagesection2{
-        border-radius: 5%;
-        margin-left:10%;
-        margin-right:10%;
-        width: auto;
-    }
-    .titresection2 {
-        color: rgb(27, 10, 126);
-        font-size: 30px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: center;
-    }
-    .textsection2 {
-        color: rgb(6, 0, 0);
-        font-size: 18px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    /* FIN SECTION 2 */
-    /* DEBUT SECTION 3 */
-    .section3 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 87, 0.866);
-        border-radius: 4%;
-    }
-    .imagesection3 {
-        border-radius: 5%;
-        
-    }
+  
+    
     /* FIN SECTION 3 */
     
     /* DEBUT SECTION4 */
-    .section4 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
-        border-radius: 4%;
+    .box-servicehome {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: auto;
+        padding-bottom: 3px !important;
+        
+    }
+    .box-servicehome:hover {
+        transform: scale(1.05);
+    }
+
+    .date-pub{
+        font-size: 12px;
+        color: rgb(233, 22, 22);
+        font-weight: bold;
+    }
+
+        .box-activite {
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 300px !important;
+        
+    }
+    .box-activite:hover {
+        transform: scale(1.05);
+    }
+    .card-title{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .card-text{
+        font-size: 18px;
+        text-align: justify;
     }
       /* NOS CHIFFRES */
-      .fa-solid{
-          color: rgb(255, 255, 255);
-          text-align: center; 
-          font-weight: bold;
-         font-size: 50px;
+     .iconchiffres{
+        font-size: 30px !important;
+        color: rgb(255, 255, 255);
+    }
+    .titreiconchiffres{
+        text-align: center; 
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .texticonchiffres{
+        text-align: center; 
+        color: rgb(255, 255, 255);
+        font-size: 14px;
     }
 
     /* Loader Fullscreen */
@@ -576,7 +761,7 @@
 
     /* debut Image principal accueil */
     .imageprincipale {
-        height: 750px;
+        height: 80vh;
         margin-top: 4px;
         object-fit: cover;
         filter: brightness(50%);   
@@ -641,52 +826,70 @@
 
     /* FIN SECTION 1 */
 
-    /* DEBUT SECTION 2 */
-
-    .section2 {
-        padding: 50px 0;
-        background-color: rgba(21, 21, 28, 0.071);
-        border-radius: 4%;
-    }
-    .imagesection2{
-        border-radius: 5%;
-        margin-left:10%;
-        margin-right:10%;
-        width: auto;
-    }
-    .titresection2 {
-        color: rgb(27, 10, 126);
-        font-size: 30px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: center;
-    }
-    .textsection2 {
-        color: rgb(6, 0, 0);
-        font-size: 18px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    /* FIN SECTION 2 */
-    /* DEBUT SECTION 3 */
-    .section3 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
-        border-radius: 4%;
-    }
-    .imagesection3 {
-        border-radius: 5%;
+    /* DEBUT SECTION4 */
+        .box-servicehome {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 350px !important;
         
     }
-    /* FIN SECTION 3 */
-    /* DEBUT SECTION4 */
-    .section4 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
-        border-radius: 4%;
+    .box-servicehome:hover {
+        transform: scale(1.05);
+    }
+
+    .date-pub{
+        font-size: 12px;
+        color: rgb(233, 22, 22);
+        font-weight: bold;
+    }
+        .box-activite {
+        padding: 20px;
+        margin-top: 50px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 380px !important;
+
+    }
+    .box-activite:hover {
+        transform: scale(1.05);
+    }
+    .card-title{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .card-text{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .iconchiffres{
+        font-size: 50px !important;
+        color: rgb(255, 255, 255);
+    }
+    .titreiconchiffres{
+        text-align: center; 
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .texticonchiffres{
+        text-align: center; 
+        color: rgb(255, 255, 255);
+        font-size: 14px;
     }
     
     
@@ -708,12 +911,12 @@
 
     /* debut Image principal accueil */
     .imageprincipale {
-        height: 850px;
+        height: 90vh;
         margin-top: 2px;
         object-fit: cover;
         filter: brightness(50%);   
     }
-
+  
        /* Fin Image principal accueil */
 
 
@@ -773,54 +976,65 @@
 
     /* FIN SECTION 1 */
 
-    /* DEBUT SECTION 2 */
-
-    .section2 {
-        padding: 50px 0;
-        background-color: rgba(21, 21, 28, 0.071);
-        border-radius: 4%;
-    }
-    .imagesection2{
-        border-radius: 5%;
-        margin-left:10%;
-        margin-right:10%;
-        width: auto;
-    }
-    .titresection2 {
-        color: rgb(27, 10, 126);
-        font-size: 50px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: center;
-    }
-    .textsection2 {
-        color: rgb(6, 0, 0);
-        font-size: 28px;
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    /* FIN SECTION 2 */
-    /* DEBUT SECTION 3 */
-    .section3 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
-        border-radius: 4%;
-    }
-    .imagesection3 {
-        border-radius: 5%;
+    /* DEBUT SECTION4 */
+        .box-servicehome {
+        padding: 20px;
+        margin-top: auto;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 420px !important;
         
     }
-    /* FIN SECTION 3 */
-    /* DEBUT SECTION4 */
-    .section4 {
-        padding: 50px 0;
-        background-color: rgba(13, 13, 116, 0.866);
-        border-radius: 4%;
+    .box-servicehome:hover {
+        transform: scale(1.05);
     }
-    
+
+    .date-pub{
+        font-size: 12px;
+        color: rgb(233, 22, 22);
+        font-weight: bold;
+    }
+
+    .box-activite {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        transition: transform 0.2s;
+        height: 300px;
+        padding-bottom: 350px !important;
+        
+    }
+    .box-activite:hover {
+        transform: scale(1.05);
+    }
+
+    .iconchiffres{
+        font-size: 60px !important;
+        color: rgb(255, 255, 255);
+    }
+    .titreiconchiffres{
+        text-align: center; 
+        font-weight: bold;
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+    }
+    .texticonchiffres{
+        text-align: center; 
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+    }
+   
+
 
 }
 

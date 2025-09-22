@@ -1,0 +1,515 @@
+@media (min-width: 0px) and (max-width:576px){
+
+    /* DEBUT section1 */
+     .imageprincipaleabout{
+        height: 30vh;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%); 
+        border-radius: 5%;
+    }
+     .animated-text-about{
+      font-size: 14px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      justify-items: auto;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+    }
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .text-about {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        position: absolute;
+
+        
+    }
+    /* FIN SECTION1 */
+
+    /* DEBUT SECTION 2 */
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        width: auto;
+    }
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 14px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 12px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 87, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        
+        width: auto;
+        
+    }
+    /* FIN SECTION 3 */
+}
+
+@media (min-width: 577px) and (max-width:768px){
+     /* DEBUT section1 */
+     .imageprincipaleabout{
+        height: 200px;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);
+        border-radius: 5%;
+    }
+    .animated-text-about{
+        font-size: 18px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      justify-items: auto;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+    }
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .text-about {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: white;
+     text-align: center;
+    }
+    
+    /* FIN SECTION1 */
+     .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+        height: 150px;
+    }
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 20px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 18px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 87, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+        
+    }
+    /* FIN SECTION 3 */
+}
+
+@media (min-width: 769px) and (max-width:992px){
+     /* DEBUT section1 */
+     .imageprincipaleabout{
+        height: 200px;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);
+        border-radius: 5%;
+
+    }
+    .animated-text-about{
+        font-size: 18px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      justify-items: auto;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+    }
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .text-about {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: white;
+     text-align: center;
+    }
+
+    
+    /* FIN SECTION1 */
+     .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 30px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 25px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 87, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+        
+    }
+    /* FIN SECTION 3 */
+}
+@media (min-width: 993px) and (max-width:1200px){
+     /* DEBUT section1 */
+     .imageprincipaleabout{
+        height: 200px;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);
+        border-radius: 5%;
+    }
+     .animated-text-about{
+        font-size: 35px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      justify-items: auto;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+    }
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .text-about {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: rgb(255, 255, 255);
+     text-align: center;
+    }
+    /* FIN SECTION1 */
+     .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 30px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 25px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 87, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+        
+    }
+    /* FIN SECTION 3 */
+}
+
+@media (min-width: 1201px) and (max-width:1400px){
+     /* DEBUT section1 */
+     .imageprincipaleabout{
+        height: 200px;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);
+        border-radius: 5%;
+    }
+     .animated-text-about{
+        font-size: 35px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      justify-items: auto;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+    }
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .text-about {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: rgb(255, 255, 255);
+     text-align: center;
+    }
+    /* FIN SECTION1 */
+     .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 30px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 25px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 87, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+        
+    }
+    /* FIN SECTION 3 */
+}
+@media (min-width: 1401px) {
+     /* DEBUT section1 */
+     .imageprincipaleabout{
+        height: 200px;
+        margin-top: 2px;
+        object-fit: cover;
+        filter: brightness(50%);
+        border-radius: 5%;
+    }
+     .animated-text-about{
+        font-size: 35px; /* Ajustez la taille du texte si nécessaire */
+      font-weight: bold;
+      justify-items: auto;
+      animation: slideDown 1.5s ease-out; /* Animation de descente */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: italic;
+    }
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .text-about {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: rgb(255, 255, 255);
+     text-align: center;
+    }
+    /* FIN SECTION1 */
+     .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .imagesection2{
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+    }
+    .section2 {
+        padding: 50px 0;
+        background-color: rgba(21, 21, 28, 0.071);
+        border-radius: 4%;
+    }
+    .titresection2 {
+        color: rgb(27, 10, 126);
+        font-size: 30px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .textsection2 {
+        color: rgb(6, 0, 0);
+        font-size: 25px;
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* FIN SECTION 2 */
+    /* DEBUT SECTION 3 */
+    .section3 {
+        padding: 50px 0;
+        background-color: rgba(13, 13, 87, 0.866);
+        border-radius: 4%;
+    }
+    .imagesection3 {
+        border-radius: 5%;
+        margin-left:10%;
+        margin-right:10%;
+        width: auto;
+        
+        
+    }
+    /* FIN SECTION 3 */
+}

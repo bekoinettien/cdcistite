@@ -13,6 +13,7 @@ use App\Models\User;
 use App\Models\Activite;
 use App\Models\About;
 use App\Models\Aboutsection;
+use App\Models\Contact; 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
@@ -656,5 +657,29 @@ class ControllerBackend extends Controller
         }
         $user->delete();
         return redirect()->route('listeadminusers')->with('success', 'Utilisateur supprimé avec succès !');
+    }
+
+    //fin users
+
+    //Gestion des contacts
+    public function createContacts(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:contacts',
+            'message' => 'required|string',
+            'phone' => 'nullable|string|max:20',
+            'subject' => 'nullable|string|max:255',
+        ]);
+
+        $contact = new Contact();
+        $contact->name = $request->input('name');
+        $contact->email = $request->input('email');
+        $contact->message = $request->input('message');
+        $contact->phone = $request->input('phone');
+        $contact->subject = $request->input('subject');
+        $contact->save();
+
+        return redirect()->back()->with('success', 'Message envoyé avec succès !');
     }
 }

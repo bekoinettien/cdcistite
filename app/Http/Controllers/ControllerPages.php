@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\CheckRole;
 use App\Models\Accueilcorrousel;
 use App\Models\Gros;
 use App\Models\Demi;
@@ -12,6 +13,9 @@ use App\Models\User;
 use App\Models\Activite;
 use App\Models\About;
 use App\Models\Aboutsection;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Contact;
+
 
 use Illuminate\Http\Request;
 
@@ -21,7 +25,7 @@ class ControllerPages extends Controller
     public function accueil()
     {
          $actualites = Actualite::orderBy('created_at', 'desc')
-                            ->take(3) // récupérer seulement les 3 dernières
+                            ->take(4) // récupérer seulement les 3 dernières
                             ->get();
         $gros = Gros::count();
         $demi = Demi::count();
@@ -130,8 +134,9 @@ class ControllerPages extends Controller
     // debut de la gestion des gros
     public function gros()
     {
-        return view('admin.pages.ajoutegros');
-
+        
+     return view('admin.pages.ajoutegros');
+        
     }
     public function listegros()
     {
@@ -200,6 +205,12 @@ class ControllerPages extends Controller
 
     // fin de la gestion des actualités
 
+
+    //Debut de contact
+        public function contacts(){
+            return view('pages.contacts');
+        }
+    //Fin contact
 
     // debut de la gestion dashboard
     public function dashboard(){

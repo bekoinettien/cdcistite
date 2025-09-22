@@ -9,17 +9,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="{{asset('css/magasin.css')}}">
-
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/about.css')}}">
+    <link rel="stylesheet" href="{{asset('css/contact.css')}}">
+    <link rel="stylesheet" href="{{asset('css/actualite.css')}}">
     <!-- Leaflet CSS -->
- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+ {{-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
+ <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> --}}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
 
     <title>CDCI</title>
     <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <script>
     document.addEventListener("DOMContentLoaded", function(){
@@ -49,9 +53,57 @@
         behavior: "smooth" // Défilement fluide
       });
     });
+    
+    const searchBox = document.getElementById("searchBox");
+    const searchBtn = document.getElementById("searchBtn");
+    const searchInput = document.querySelector(".search-input");
+
+    searchBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      searchBox.classList.toggle("active");
+      if (searchBox.classList.contains("active")) {
+        searchInput.focus();
+      }
+    });
+  
   });
 </script>
+<style>
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
 
+    .search-input {
+      width: 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      outline: none;
+      transition: width 0.4s ease-in-out;
+      opacity: 0;
+    }
+
+    .search-box.active .search-input {
+      width: 250px; /* largeur finale */
+      opacity: 1;
+      padding: 8px 12px;
+    }
+
+    .search-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 5px;
+      font-size:35px;
+    }
+
+    .search-btn i {
+      color: #333;
+    }
+  </style>
 
 <body>
     <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 255, 255, 0)">
@@ -68,15 +120,14 @@
             <li class="nav-item">
               <a class="nav-link textmenu" href="/about">A Propos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link textmenu" href="/listegros">GROS</a>
-            </li>
+            
             
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle textmenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 DETAILS
+                 NOS MAGASINS
               </a>
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/listegros">GROS</a></li>
                 <li><a class="dropdown-item" href="/listedemi">DEMI-GROS</a></li>
                 <li><a class="dropdown-item" href="/listeking">KING-CASH</a></li>
               </ul>
@@ -87,7 +138,7 @@
             </li>
 
             <li class="nav-item">
-             <a class="nav-link textmenu" href="contacts">CONTACTS</a>
+             <a class="nav-link textmenu" href="contact">CONTACTS</a>
             </li>
               @auth
 
@@ -100,10 +151,12 @@
             
       
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit">Rechercher</button>
-          </form>
+          <div class="search-box" id="searchBox">
+            <input type="text" class="search-input" placeholder="Rechercher...">
+            <button class="search-btn" id="searchBtn">
+              🔍
+            </button>
+          </div>
         </div>
      </div>
     </nav>
@@ -116,5 +169,7 @@
 <br>
 <br>
 <br>
+
+
 @extends('layouts.foot')
 </html>

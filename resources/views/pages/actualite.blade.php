@@ -21,7 +21,7 @@
         <div class="row">
 
             @foreach($actualites as $index => $actu)
-            <div class="col-sm-6 col-md-6 col-lg-4">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="box-service " style="padding: 5% ; margin-bottom: 20px;">
                     <div class="service-content text-center">
                         <!-- Image -->
@@ -36,20 +36,21 @@
                         <p class="details">
                             <i class="fa-solid fa-info-circle me-2 icon-details"></i> {{ $actu->description }}
                         </p>
+                        <p>{{ $actu->created_at->format('d/m/Y') }}</p>
 
                         <!-- Horaire (ouvre modal) -->
-                        <p class="details text-primary" 
+                        {{-- <p class="details text-primary" 
                            style="cursor:pointer;"
                            data-bs-toggle="modal" 
                            data-bs-target="#horaireModal{{ $index }}">
                             <i class="fa-solid fa-clock me-2 icon-details"></i> Voir les horaires
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="horaireModal{{ $index }}" tabindex="-1" aria-hidden="true">
+            {{-- <div class="modal fade" id="horaireModal{{ $index }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -65,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             @endforeach
 
         </div>

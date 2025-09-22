@@ -70,7 +70,11 @@ Route::post('/actualite/update/{id}',[ControllerBackend::class,'updateActualite'
 Route::get('/actualite/delete/{id}',[ControllerBackend::class,'deleteActualite'])->name('deleteActualite');
 
 
+Route::get('/contact',[ControllerPages::class,'contacts']);
+Route::post('/contact/create',[ControllerBackend::class,'createContacts'])->name('create.Contacts');
+
 // route admin
+
 Route::middleware([CheckRole::class])->group(function () {
     Route::get('/dashboard',[ControllerPages::class,'dashboard'])->name('dashboard');
     Route::get('/accueil',[ControllerPages::class,'accueilviewadd']);

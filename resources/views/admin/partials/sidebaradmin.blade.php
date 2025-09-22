@@ -40,7 +40,7 @@
               <li class="nav-header">Gestion des Pages</li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                 <i class='fa fa-home'></i>
                   <p>
                     Accueil
                     <i class="nav-arrow bi bi-chevron-right"></i>
@@ -92,7 +92,7 @@
               <hr style="border: 1px solid white; margin: 10px 0;">
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                  <i class='fa fa-info-circle'></i>
                   <p>
                     About
                     <i class="nav-arrow bi bi-chevron-right"></i>
@@ -113,7 +113,7 @@
                       </li>
                       <li class="nav-item">
                         <a href="/listeaboutsection" class="nav-link">
-                          <i class='fa fa-book'></i>
+                          <i class='fa fa-code'></i>
                           <p>Ajouter une Section</p>
                         </a>
                       </li>
